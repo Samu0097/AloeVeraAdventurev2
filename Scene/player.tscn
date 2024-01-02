@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cccaokb7wklss"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_uxijk"]
+[ext_resource type="Texture2D" uid="uid://bcf32krkko4l" path="res://Assets/Assets/Bat/bat_wingsDown.png" id="2_rnyqo"]
+[ext_resource type="Texture2D" uid="uid://cu8e04p2ac2xg" path="res://Assets/Assets/Bat/bat_wingsUp.png" id="3_3tff6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_22831"]
+radius = 5.0
+height = 14.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8fjgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rnyqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3tff6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_uxijk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_22831")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.499999, 0)
+scale = Vector2(0.59375, 0.5)
+sprite_frames = SubResource("SpriteFrames_8fjgo")
+autoplay = "default"
+frame = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
