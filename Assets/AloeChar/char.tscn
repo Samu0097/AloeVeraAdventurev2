@@ -1,72 +1,75 @@
-[gd_scene load_steps=8 format=3 uid="uid://cba4p2wlm42nd"]
+[gd_scene load_steps=11 format=3 uid="uid://cba4p2wlm42nd"]
 
-[ext_resource type="Texture2D" uid="uid://mgsmfbptpmnl" path="res://Assets/AloeChar/Idle.png" id="1_c30s2"]
+[ext_resource type="Texture2D" uid="uid://dcmuqaltgglrw" path="res://Assets/AloeChar/jump/2.png" id="1_5awvf"]
+[ext_resource type="Texture2D" uid="uid://t5imwftwcjs3" path="res://Assets/AloeChar/idle/0.png" id="2_yky2t"]
+[ext_resource type="Texture2D" uid="uid://dmiois4kyfx3i" path="res://Assets/AloeChar/idle/1.png" id="3_mpfdd"]
+[ext_resource type="Texture2D" uid="uid://c8rvky07jr425" path="res://Assets/AloeChar/jump/1.png" id="4_j3y2w"]
+[ext_resource type="Texture2D" uid="uid://cntrpy3wwajjd" path="res://Assets/AloeChar/walk/0.png" id="5_g2c0f"]
+[ext_resource type="Texture2D" uid="uid://cxjq8kww2bcvw" path="res://Assets/AloeChar/walk/1.png" id="6_8sgkn"]
+[ext_resource type="Texture2D" uid="uid://dgu2j6gt44hw0" path="res://Assets/AloeChar/walk/2.png" id="7_4ul73"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_84fhb"]
+load_path = "res://.godot/imported/Idle.png-5893d402475d80f3a102c248a8547c98.ctex"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ptfx"]
 radius = 4.0
 height = 16.0
 
-[sub_resource type="Animation" id="Animation_gjfbt"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_hrbpy"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_d4t5t"]
-resource_name = "walk_right"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_el1ac"]
-_data = {
-"RESET": SubResource("Animation_hrbpy"),
-"idle": SubResource("Animation_gjfbt"),
-"walk_right": SubResource("Animation_d4t5t")
-}
-
-[sub_resource type="AnimationRootNode" id="AnimationRootNode_lmuyv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjrbf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5awvf")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yky2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mpfdd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_j3y2w")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_g2c0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8sgkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4ul73")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
 
 [node name="AloeChar" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_c30s2")
+visible = false
+texture = SubResource("CompressedTexture2D_84fhb")
 hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_3ptfx")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_el1ac")
-}
-autoplay = "idle"
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_el1ac")
-}
-tree_root = SubResource("AnimationRootNode_lmuyv")
-anim_player = NodePath("../AnimationPlayer")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vjrbf")
+animation = &"idle"
+frame_progress = 0.975019
