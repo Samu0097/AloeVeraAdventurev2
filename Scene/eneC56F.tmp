@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckyh7lca172jk"]
+
+[ext_resource type="Script" path="res://Enemy.gd" id="1_fx05m"]
+[ext_resource type="Texture2D" uid="uid://bcf32krkko4l" path="res://Assets/Assets/Bat/bat_wingsDown.png" id="2_1s83y"]
+[ext_resource type="Texture2D" uid="uid://cu8e04p2ac2xg" path="res://Assets/Assets/Bat/bat_wingsUp.png" id="3_73sqt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wxktc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1s83y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_73sqt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kuob0"]
+radius = 5.09902
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cxh3m"]
+radius = 72.111
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xgieb"]
+radius = 7.0
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_fx05m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.499999, 0)
+scale = Vector2(0.59375, 0.5)
+sprite_frames = SubResource("SpriteFrames_wxktc")
+autoplay = "default"
+frame_progress = 0.299011
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kuob0")
+
+[node name="detectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectionArea"]
+shape = SubResource("CircleShape2D_cxh3m")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xgieb")
