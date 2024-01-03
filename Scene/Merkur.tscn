@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dhot0r2wpqnf3"]
+[gd_scene load_steps=23 format=3 uid="uid://dhot0r2wpqnf3"]
 
 [ext_resource type="Texture2D" uid="uid://bwc6ywtjwcxke" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="1_bk1t5"]
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://duvummyischeu" path="res://Assets/Portals/green/1.png" id="11_ojsh6"]
 [ext_resource type="Texture2D" uid="uid://4t0q8q7iyh3p" path="res://Assets/Portals/green/2.png" id="12_vrejj"]
 [ext_resource type="Texture2D" uid="uid://blmspv6cye4pm" path="res://Assets/Portals/green/3.png" id="13_pprou"]
+[ext_resource type="Script" path="res://Scene/FakePortal.gd" id="14_8hdqi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]
 texture = ExtResource("1_ku207")
@@ -248,70 +249,76 @@ animations = [{
 radius = 5.0
 height = 18.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ceh6w"]
+radius = 5.0
+height = 18.0
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_omc33")
 
-[node name="CompleteStaticBg(288X208)10" type="Sprite2D" parent="."]
+[node name="Background" type="Node2D" parent="."]
+
+[node name="CompleteStaticBg(288X208)10" type="Sprite2D" parent="Background"]
 position = Vector2(1322, 122)
 scale = Vector2(1.26389, 1.25962)
 texture = ExtResource("1_bk1t5")
 
-[node name="CompleteStaticBg(288X208)9" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)9" type="Sprite2D" parent="Background"]
 position = Vector2(890, 461)
 scale = Vector2(0.891361, 1)
 texture = ExtResource("1_bk1t5")
 
-[node name="CompleteStaticBg(288X208)8" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)8" type="Sprite2D" parent="Background"]
 position = Vector2(121, 461)
 scale = Vector2(0.898408, 1)
 texture = ExtResource("1_bk1t5")
 
-[node name="CompleteStaticBg(288X208)7" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)7" type="Sprite2D" parent="Background"]
 position = Vector2(634, 461)
 scale = Vector2(0.88997, 1)
 texture = ExtResource("1_bk1t5")
 
-[node name="CompleteStaticBg(288X208)6" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)6" type="Sprite2D" parent="Background"]
 position = Vector2(378, 461)
 scale = Vector2(0.89002, 1)
 texture = ExtResource("1_bk1t5")
 
-[node name="CompleteStaticBg(288X208)5" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)5" type="Sprite2D" parent="Background"]
 position = Vector2(1390, 461)
 scale = Vector2(0.796308, 1)
 texture = ExtResource("1_bk1t5")
 
-[node name="CompleteStaticBg(288X208)4" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)4" type="Sprite2D" parent="Background"]
 position = Vector2(1147, 461)
 scale = Vector2(0.892361, 1)
 texture = ExtResource("1_bk1t5")
 
-[node name="2-SmallerMountains2" type="Sprite2D" parent="."]
+[node name="2-SmallerMountains2" type="Sprite2D" parent="Background"]
 position = Vector2(750, 504)
 scale = Vector2(5.2691, 1.72596)
 texture = ExtResource("4_mnkma")
 
-[node name="CompleteStaticBg(288X208)3" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)3" type="Sprite2D" parent="Background"]
 position = Vector2(957, 121)
 scale = Vector2(1.33495, 1.25)
 texture = ExtResource("1_bk1t5")
 
-[node name="CompleteStaticBg(288X208)2" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)2" type="Sprite2D" parent="Background"]
 position = Vector2(570, 121)
 scale = Vector2(1.35534, 1.25)
 texture = ExtResource("1_bk1t5")
 
-[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="."]
+[node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="Background"]
 position = Vector2(188, 121)
 scale = Vector2(1.30035, 1.25481)
 texture = ExtResource("1_bk1t5")
 
-[node name="2-SmallerMountains" type="Sprite2D" parent="."]
+[node name="2-SmallerMountains" type="Sprite2D" parent="Background"]
 position = Vector2(751, 190)
 scale = Vector2(5.25694, 1.72596)
 texture = ExtResource("4_mnkma")
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="Background"]
 tile_set = SubResource("TileSet_pg3y8")
 format = 2
 layer_0/name = "background"
@@ -321,7 +328,7 @@ layer_2/name = "extras"
 layer_2/tile_data = PackedInt32Array(524298, 65537, 1, 524299, 65537, 1, 524300, 65537, 1, 589833, 589825, 1, 589834, 655361, 1, 589835, 655361, 1, 589836, 655361, 1, 589837, 720897, 1, 983104, 327681, 1, 1245241, 327681, 1, 1507392, 327681, 1, 1769532, 327681, 1, 3538966, 327681, 1, 3538967, 327681, 1, 3538968, 327681, 1, 2883622, 65537, 1, 3604519, 196609, 5, 3604520, 196609, 5, 3604521, 196609, 5, 3604522, 196609, 5, 3604523, 196609, 5, 2949140, 196609, 5, 2949141, 196609, 5, 1703974, 65537, 5, 1703976, 65537, 5, 1703978, 65537, 5, 1703980, 65537, 5, 1703982, 65537, 5, 851998, 196609, 5, 851999, 196609, 5, 852019, 196609, 5, 3604490, 655361, 1, 3604491, 655361, 1, 3604492, 655361, 1, 3604493, 655361, 1, 3604489, 589825, 1, 3538954, 65537, 1, 3538955, 65537, 1, 3538956, 65537, 1, 3538957, 65537, 1, 3604494, 720897, 1, 3538961, 65537, 1, 3604496, 589825, 1, 3604498, 720897, 1, 3604497, 655361, 1, 5308491, 65537, 1, 5308492, 65537, 1, 5374026, 589825, 1, 5374029, 720897, 1, 5374028, 655361, 1, 5374027, 655361, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_te6mj")]
-position = Vector2(1023, 1298)
+position = Vector2(389, 493)
 
 [node name="Enemy" parent="." instance=ExtResource("7_gsjho")]
 position = Vector2(614, 123)
@@ -339,4 +346,76 @@ frame_progress = 0.774764
 position = Vector2(1240, 1317)
 shape = SubResource("CapsuleShape2D_u5ehr")
 
+[node name="FakePortal" type="Area2D" parent="."]
+position = Vector2(-1083, -1201)
+script = ExtResource("14_8hdqi")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FakePortal"]
+position = Vector2(1235, 1313)
+sprite_frames = SubResource("SpriteFrames_rndcq")
+autoplay = "default"
+frame = 3
+frame_progress = 0.330626
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FakePortal"]
+position = Vector2(1235, 1313)
+shape = SubResource("CapsuleShape2D_ceh6w")
+
+[node name="FakePortal2" type="Area2D" parent="."]
+position = Vector2(-1008, -488)
+script = ExtResource("14_8hdqi")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="FakePortal2"]
+position = Vector2(1240, 1320)
+sprite_frames = SubResource("SpriteFrames_rndcq")
+autoplay = "default"
+frame = 3
+frame_progress = 0.330626
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FakePortal2"]
+position = Vector2(1240, 1320)
+shape = SubResource("CapsuleShape2D_ceh6w")
+
+[node name="FakePortal3" type="Area2D" parent="."]
+position = Vector2(-976, -488)
+script = ExtResource("14_8hdqi")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="FakePortal3"]
+position = Vector2(1240, 1320)
+sprite_frames = SubResource("SpriteFrames_rndcq")
+autoplay = "default"
+frame = 3
+frame_progress = 0.330626
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FakePortal3"]
+position = Vector2(1240, 1320)
+shape = SubResource("CapsuleShape2D_ceh6w")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(704, 1368)
+sprite_frames = SubResource("SpriteFrames_rndcq")
+autoplay = "default"
+frame = 3
+frame_progress = 0.330626
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(1312, 696)
+sprite_frames = SubResource("SpriteFrames_rndcq")
+autoplay = "default"
+frame = 3
+frame_progress = 0.330626
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(448, 752)
+sprite_frames = SubResource("SpriteFrames_rndcq")
+autoplay = "default"
+frame = 3
+frame_progress = 0.330626
+
 [connection signal="body_entered" from="GreenPortal" to="GreenPortal" method="_on_body_entered"]
+[connection signal="body_entered" from="FakePortal" to="FakePortal" method="_on_body_entered"]
+[connection signal="body_entered" from="FakePortal2" to="FakePortal2" method="_on_body_entered"]
+[connection signal="body_entered" from="FakePortal3" to="FakePortal3" method="_on_body_entered"]

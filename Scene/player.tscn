@@ -14,7 +14,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_22831"]
 radius = 5.0
-height = 14.0
+height = 18.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8fjgo"]
 animations = [{
@@ -84,7 +84,6 @@ shape = SubResource("CapsuleShape2D_22831")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.499999, 0)
-scale = Vector2(1, 0.842)
 sprite_frames = SubResource("SpriteFrames_8fjgo")
 animation = &"idle"
 autoplay = "idle"
