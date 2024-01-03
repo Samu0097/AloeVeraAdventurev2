@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://tsw3ilff7h8o"]
+[gd_scene load_steps=2 format=3 uid="uid://cvrqrxe2vwcs1"]
 
-[ext_resource type="Script" path="res://Scene/intro.gd" id="1_u4hiw"]
+[ext_resource type="Script" path="res://Scene/menu.gd" id="1_ailnr"]
 
-[node name="Intro" type="Node2D"]
+[node name="Exit" type="Node2D"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_u4hiw")
+script = ExtResource("1_ailnr")
 
 [node name="New Game" type="Button" parent="Control"]
 layout_mode = 0
@@ -22,7 +22,7 @@ offset_top = 64.0
 offset_right = 160.0
 offset_bottom = 95.0
 action_mode = 0
-text = "New Game"
+text = "Really?"
 icon_alignment = 1
 
 [node name="Exit" type="Button" parent="Control"]
@@ -31,7 +31,7 @@ offset_left = 208.0
 offset_top = 40.0
 offset_right = 304.0
 offset_bottom = 88.0
-text = "Exit
+text = "Yes
 "
 
 [node name="Credits" type="Button" parent="Control"]
@@ -40,7 +40,7 @@ offset_left = 144.0
 offset_top = 128.0
 offset_right = 240.0
 offset_bottom = 159.0
-text = "Credits"
+text = "No"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
