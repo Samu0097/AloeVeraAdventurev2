@@ -11,7 +11,7 @@ var JumpAvailability : bool
 @onready var JumpTimer : Timer = $JumpTimer
 
 @onready var level_sprite_sets: Array = [] #Alle SpriteSets
-var current_level : int = 0  # Der aktuelle Level-Index
+#var current_level : int = 0  # Der aktuelle Level-Index
  
 
 func _ready():
@@ -53,12 +53,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	# Hier könntest du deine Level-Logik einfügen
-	# Zum Beispiel könntest du den Level-Index basierend auf bestimmten Bedingungen ändern
 
-	# Annahme: Ändere den Level-Index, wenn eine Taste gedrückt wird (z.B., für Testzwecke)
-	if Input.is_action_just_pressed("ui_focus_next"):
-		set_sprite_set((current_level + 1) % level_sprite_sets.size())
+	# Annahme: Ändere den Level-Index, wenn die Tab-Taste gedrückt wird
+	#if Input.is_action_just_pressed("ui_focus_next"):
+	#	set_sprite_set((current_level + 1) % level_sprite_sets.size())
 	
 
 func _on_jump_timer_timeout():
@@ -77,4 +75,4 @@ func load_sprite_sets():
 func set_sprite_set(level_index: int):
 	if level_index < level_sprite_sets.size():
 		animated_sprite.frames = level_sprite_sets[level_index]
-		current_level = level_index
+		#current_level = level_index

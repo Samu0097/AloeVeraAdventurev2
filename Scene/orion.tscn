@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://de5cunaic7w2c"]
+[gd_scene load_steps=13 format=3 uid="uid://de5cunaic7w2c"]
 
 [ext_resource type="Texture2D" uid="uid://cnee2aeec6la0" path="res://Assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_om7qi"]
+[ext_resource type="Script" path="res://Scene/orion.gd" id="1_sd74p"]
 [ext_resource type="Texture2D" uid="uid://b26lsqnla6ker" path="res://Assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_0citb"]
 [ext_resource type="Texture2D" uid="uid://b27gdijwhd32a" path="res://Assets/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" id="3_q4vfl"]
 [ext_resource type="Texture2D" uid="uid://ctlsxjyxt2s6u" path="res://Assets/Assets/sheet.png" id="4_ql85v"]
@@ -508,6 +509,7 @@ sources/2 = SubResource("TileSetAtlasSource_cq5t7")
 sources/3 = SubResource("TileSetAtlasSource_hanep")
 
 [node name="Orion" type="Node2D"]
+script = ExtResource("1_sd74p")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ukpod")
