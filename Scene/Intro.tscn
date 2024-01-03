@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://tsw3ilff7h8o"]
+
+[ext_resource type="Script" path="res://Scene/menu.gd" id="1_rbxkv"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbxkv")
+
+[node name="New Game" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 160.0
+offset_bottom = 95.0
+action_mode = 0
+text = "New Game"
+icon_alignment = 1
+
+[node name="Exit" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 40.0
+offset_right = 304.0
+offset_bottom = 88.0
+text = "Exit
+"
+
+[node name="Credits" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 128.0
+offset_right = 240.0
+offset_bottom = 159.0
+text = "Credits"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(3.375, 3.375)
+
+[connection signal="pressed" from="Control/New Game" to="Control" method="_on_new_game_pressed"]
+[connection signal="pressed" from="Control/Exit" to="Control" method="_on_exit_pressed"]

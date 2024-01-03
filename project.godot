@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="AloeVeraAdventure"
-run/main_scene="res://Scene/orion.tscn"
+run/main_scene="res://Scene/Intro.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
