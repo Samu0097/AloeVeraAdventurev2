@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cccaokb7wklss"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_uxijk"]
-[ext_resource type="SpriteFrames" path="res://Assets/AloeChar/normal/player.tres" id="2_v0bdb"]
+[ext_resource type="SpriteFrames" uid="uid://by017uk05v318" path="res://Assets/AloeChar/normal/player.tres" id="2_v0bdb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_22831"]
 radius = 4.0
@@ -23,3 +23,9 @@ autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+
+[node name="JumpTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="JumpTimer" to="." method="_on_jump_timer_timeout"]
