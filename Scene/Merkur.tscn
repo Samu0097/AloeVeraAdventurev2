@@ -394,21 +394,21 @@ frame_progress = 0.330626
 position = Vector2(1240, 1320)
 shape = SubResource("CapsuleShape2D_ceh6w")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="FakePortal4" type="AnimatedSprite2D" parent="."]
 position = Vector2(704, 1368)
 sprite_frames = SubResource("SpriteFrames_rndcq")
 autoplay = "default"
 frame = 3
 frame_progress = 0.330626
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+[node name="FakePortal5" type="AnimatedSprite2D" parent="."]
 position = Vector2(1312, 696)
 sprite_frames = SubResource("SpriteFrames_rndcq")
 autoplay = "default"
 frame = 3
 frame_progress = 0.330626
 
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+[node name="FakePortal6" type="AnimatedSprite2D" parent="."]
 position = Vector2(448, 752)
 sprite_frames = SubResource("SpriteFrames_rndcq")
 autoplay = "default"
