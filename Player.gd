@@ -83,6 +83,10 @@ func set_sprite_set(set_level_index: int):
 		animated_sprite.frames = level_sprite_sets[set_level_index]
 		#current_level = level_index
 		
+
+func LoseLife():
+	Global.life = Global.life -1
+	
 func ResetPlayer():
 	position = Vector2(Global.positionX, Global.positionY)
 	Global.life -= 1
