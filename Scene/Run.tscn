@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://fwr80xi03q7j"]
+[gd_scene load_steps=6 format=3 uid="uid://djrd26ymv67k5"]
 
 [ext_resource type="Texture2D" uid="uid://oac531t2j3af" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Bubbling_Oil_frames (16 x 32).png" id="1_o5l2v"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="2_6ascl"]
-[ext_resource type="PackedScene" uid="uid://ckyh7lca172jk" path="res://Scene/enemy.tscn" id="3_40prt"]
+[ext_resource type="PackedScene" uid="uid://dbp3jgwxeuk2w" path="res://Scene/enemy.tscn" id="3_40prt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48xt8"]
 texture = ExtResource("1_o5l2v")
