@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5aqh3i2sfh8t"
-path="res://.godot/imported/3.png-bc1d3e27962cbb7f56a4208c2ce3127c.ctex"
+uid="uid://bo16k8sdfuuy8"
+path="res://.godot/imported/2.png-44fb0b3672bfb7868a60511dbd740566.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AloeChar/jump/3.png"
-dest_files=["res://.godot/imported/3.png-bc1d3e27962cbb7f56a4208c2ce3127c.ctex"]
+source_file="res://Assets/AloeChar/normal/attack/2.png"
+dest_files=["res://.godot/imported/2.png-44fb0b3672bfb7868a60511dbd740566.ctex"]
 
 [params]
 

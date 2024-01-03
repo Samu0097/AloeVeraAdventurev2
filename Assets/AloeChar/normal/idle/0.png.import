@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8rvky07jr425"
-path="res://.godot/imported/1.png-ecc5e236f0f2230931d47b86806387a2.ctex"
+uid="uid://t5imwftwcjs3"
+path="res://.godot/imported/0.png-e7bf64eda3efc96e9d17bc8c750670a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AloeChar/jump/1.png"
-dest_files=["res://.godot/imported/1.png-ecc5e236f0f2230931d47b86806387a2.ctex"]
+source_file="res://Assets/AloeChar/normal/idle/0.png"
+dest_files=["res://.godot/imported/0.png-e7bf64eda3efc96e9d17bc8c750670a2.ctex"]
 
 [params]
 

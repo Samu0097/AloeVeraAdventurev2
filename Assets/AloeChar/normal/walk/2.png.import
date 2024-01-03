@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgu2j6gt44hw0"
-path="res://.godot/imported/2.png-ed97d682119c401207595fbdc07c1e31.ctex"
+path="res://.godot/imported/2.png-9efe89a199cfc81e67b1a82d86b8f2d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AloeChar/walk/2.png"
-dest_files=["res://.godot/imported/2.png-ed97d682119c401207595fbdc07c1e31.ctex"]
+source_file="res://Assets/AloeChar/normal/walk/2.png"
+dest_files=["res://.godot/imported/2.png-9efe89a199cfc81e67b1a82d86b8f2d4.ctex"]
 
 [params]
 
