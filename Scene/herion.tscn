@@ -586,8 +586,8 @@ sources/3 = SubResource("TileSetAtlasSource_bjo5u")
 [node name="Herion" type="Node2D"]
 
 [node name="CompleteStaticBg(288X208)" type="Sprite2D" parent="."]
-position = Vector2(-431.5, -442.25)
-scale = Vector2(6.82986, 7.42548)
+position = Vector2(-401.5, -398.75)
+scale = Vector2(6.98958, 7.84375)
 texture = ExtResource("1_yqd7y")
 
 [node name="TileMap" type="TileMap" parent="."]
