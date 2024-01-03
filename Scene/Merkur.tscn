@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhot0r2wpqnf3"]
+[gd_scene load_steps=13 format=3 uid="uid://dhot0r2wpqnf3"]
 
 [ext_resource type="Texture2D" uid="uid://bwc6ywtjwcxke" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="1_bk1t5"]
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://do4optixxlap" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="3_chsny"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="3_te6mj"]
 [ext_resource type="Texture2D" uid="uid://66nt8fce43di" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="4_mnkma"]
+[ext_resource type="PackedScene" uid="uid://dbp3jgwxeuk2w" path="res://Scene/enemy.tscn" id="7_gsjho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]
 texture = ExtResource("1_ku207")
@@ -290,3 +291,6 @@ layer_2/tile_data = PackedInt32Array(524298, 65537, 1, 524299, 65537, 1, 524300,
 
 [node name="Player" parent="." instance=ExtResource("3_te6mj")]
 position = Vector2(268, 107)
+
+[node name="Enemy" parent="." instance=ExtResource("7_gsjho")]
+position = Vector2(295, 139)
