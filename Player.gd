@@ -90,3 +90,6 @@ func LoseLife():
 func ResetPlayer():
 	position = Vector2(Global.positionX, Global.positionY)
 	Global.life -= 1
+	
+func Portal():
+	position = Vector2(Global.positionX, Global.positionY)
