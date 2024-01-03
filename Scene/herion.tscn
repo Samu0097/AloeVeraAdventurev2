@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ugrala6rpch" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="2_d17go"]
 [ext_resource type="Texture2D" uid="uid://ctlsxjyxt2s6u" path="res://Assets/Assets/sheet.png" id="3_s2qqt"]
 [ext_resource type="Texture2D" uid="uid://chrk765lgsvum" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Lava_frames (16 x 32).png" id="4_7jbhj"]
-[ext_resource type="PackedScene" path="res://Scene/player.tscn" id="4_hyxod"]
+[ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="4_hyxod"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05vpj"]
 texture = ExtResource("1_jk8ig")
