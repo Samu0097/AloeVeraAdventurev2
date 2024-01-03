@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://by017uk05v318"]
+[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://bc4g0g0w166nv"]
 
 [ext_resource type="Texture2D" uid="uid://brni0rabpweep" path="res://Assets/AloeChar/normal/dmg/0.png" id="1_fa1sa"]
 [ext_resource type="Texture2D" uid="uid://dcmuqaltgglrw" path="res://Assets/AloeChar/normal/jump/2.png" id="1_q5s16"]
