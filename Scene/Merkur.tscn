@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://do4optixxlap" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="3_chsny"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="3_te6mj"]
 [ext_resource type="Texture2D" uid="uid://66nt8fce43di" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="4_mnkma"]
-[ext_resource type="PackedScene" uid="uid://ctr7x7swp7sxm" path="res://Scene/moreEnemy.tscn" id="7_bjjo0"]
+[ext_resource type="PackedScene" uid="uid://dbp3jgwxeuk2w" path="res://Scene/enemy.tscn" id="7_gsjho"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]
 texture = ExtResource("1_ku207")
@@ -290,11 +290,7 @@ layer_2/name = "extras"
 layer_2/tile_data = PackedInt32Array(524298, 65537, 1, 524299, 65537, 1, 524300, 65537, 1, 589833, 589825, 1, 589834, 655361, 1, 589835, 655361, 1, 589836, 655361, 1, 589837, 720897, 1, 983104, 327681, 1, 1245241, 327681, 1, 1507392, 327681, 1, 1769532, 327681, 1, 3538966, 327681, 1, 3538967, 327681, 1, 3538968, 327681, 1, 2883622, 65537, 1, 3604519, 196609, 5, 3604520, 196609, 5, 3604521, 196609, 5, 3604522, 196609, 5, 3604523, 196609, 5, 2949140, 196609, 5, 2949141, 196609, 5, 1703974, 65537, 5, 1703976, 65537, 5, 1703978, 65537, 5, 1703980, 65537, 5, 1703982, 65537, 5, 851998, 196609, 5, 851999, 196609, 5, 852019, 196609, 5, 3604490, 655361, 1, 3604491, 655361, 1, 3604492, 655361, 1, 3604493, 655361, 1, 3604489, 589825, 1, 3538954, 65537, 1, 3538955, 65537, 1, 3538956, 65537, 1, 3538957, 65537, 1, 3604494, 720897, 1, 3538961, 65537, 1, 3604496, 589825, 1, 3604498, 720897, 1, 3604497, 655361, 1, 5308491, 65537, 1, 5308492, 65537, 1, 5374026, 589825, 1, 5374029, 720897, 1, 5374028, 655361, 1, 5374027, 655361, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_te6mj")]
-position = Vector2(274, 153)
+position = Vector2(268, 107)
 
-[node name="Enemy" parent="." instance=ExtResource("7_bjjo0")]
-position = Vector2(-196, 461)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -11.202
-autoplay = true
+[node name="Enemy" parent="." instance=ExtResource("7_gsjho")]
+position = Vector2(295, 139)
