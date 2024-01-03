@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_new_game_pressed():
-	get_tree().change_scene_to_file("res://Scene/orion.tscn")
+	get_tree().change_scene_to_file("res://Scene/Merkur.tscn")
 
 
 func _on_exit_pressed():
