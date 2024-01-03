@@ -1,0 +1,66 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://bvkf5xqpml5kv"]
+
+[ext_resource type="Texture2D" uid="uid://cqtr3hkpe43f4" path="res://Assets/AloeChar/autumn/jump/2.png" id="1_1mu5u"]
+[ext_resource type="Texture2D" uid="uid://dijdy45ih1gyh" path="res://Assets/AloeChar/autumn/idle/0.png" id="1_axp1t"]
+[ext_resource type="Texture2D" uid="uid://cfy5v2flivgs3" path="res://Assets/AloeChar/autumn/idle/1.png" id="2_gw4sh"]
+[ext_resource type="Texture2D" uid="uid://ckw0a6mj3xdnq" path="res://Assets/AloeChar/autumn/jump/3.png" id="2_pfv1c"]
+[ext_resource type="Texture2D" uid="uid://cs2v7ie30mqbk" path="res://Assets/AloeChar/autumn/jump/1.png" id="5_tc1al"]
+[ext_resource type="Texture2D" uid="uid://brq84l6dfjfhh" path="res://Assets/AloeChar/autumn/jump/4.png" id="6_1q62p"]
+[ext_resource type="Texture2D" uid="uid://cacymks7ecswy" path="res://Assets/AloeChar/autumn/walk/0.png" id="6_b5klt"]
+[ext_resource type="Texture2D" uid="uid://ceq6nm7qlf61o" path="res://Assets/AloeChar/autumn/walk/1.png" id="7_yk17m"]
+[ext_resource type="Texture2D" uid="uid://dgbis7872jb05" path="res://Assets/AloeChar/autumn/walk/2.png" id="8_3eiqw"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1mu5u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pfv1c")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_axp1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gw4sh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_tc1al")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_1q62p")
+}],
+"loop": true,
+"name": &"landing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_b5klt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yk17m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3eiqw")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
