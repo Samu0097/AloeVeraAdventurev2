@@ -24,13 +24,11 @@ func _on_detection_area_body_exited(body):
 
 
 func _on_area_2d_body_entered(body):
-	if is_instance_valid(body) and body.has_method("LoseLife"):
+	if body.has_method("LoseLife"):
 		body.LoseLife()
-	
-	if is_instance_valid(body) and body.has_method("ResetPlayer"):
-		get_tree().current_scene = get_tree().current_scene
+	if body is Player and Global.life == 0:
+		#Death Menu anzeigen lassen
+		pass
 	else:
-		if is_instance_valid(body) and body.has_method("ResetPlayer"):
-			print(position)
+		if body.has_method("ResetPlayer"):
 			body.ResetPlayer()
-			print(position)
