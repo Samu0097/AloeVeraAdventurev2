@@ -1,6 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://1xppm1i3p24g"]
 
 [ext_resource type="Texture2D" uid="uid://7g7537ojuufk" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="1_jk8ig"]
+[ext_resource type="Texture2D" uid="uid://bewql0qbavjnb" path="res://Assets/Assets/Background/Additional Sky.png" id="1_pb8fe"]
 [ext_resource type="Texture2D" uid="uid://b2ugrala6rpch" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="2_d17go"]
 [ext_resource type="Texture2D" uid="uid://ctlsxjyxt2s6u" path="res://Assets/Assets/sheet.png" id="3_s2qqt"]
 [ext_resource type="Texture2D" uid="uid://chrk765lgsvum" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Lava_frames (16 x 32).png" id="4_7jbhj"]
@@ -579,6 +580,11 @@ sources/2 = SubResource("TileSetAtlasSource_aspnf")
 sources/3 = SubResource("TileSetAtlasSource_bjo5u")
 
 [node name="Herion" type="Node2D"]
+
+[node name="AdditionalSky" type="Sprite2D" parent="."]
+position = Vector2(-279, -195.5)
+scale = Vector2(76.0625, 38.9688)
+texture = ExtResource("1_pb8fe")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tw2m1")
