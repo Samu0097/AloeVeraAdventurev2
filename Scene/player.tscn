@@ -90,6 +90,7 @@ autoplay = "idle"
 frame_progress = 0.632096
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -20)
 zoom = Vector2(3, 3)
 
 [node name="JumpTimer" type="Timer" parent="."]
