@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbp3jgwxeuk2w"]
+[gd_scene load_steps=8 format=3 uid="uid://ckyh7lca172jk"]
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_fx05m"]
 [ext_resource type="Texture2D" uid="uid://bcf32krkko4l" path="res://Assets/Assets/Bat/bat_wingsDown.png" id="2_1s83y"]

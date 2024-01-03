@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b27gdijwhd32a" path="res://Assets/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" id="3_q4vfl"]
 [ext_resource type="Texture2D" uid="uid://ctlsxjyxt2s6u" path="res://Assets/Assets/sheet.png" id="4_ql85v"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="5_8c0h6"]
-[ext_resource type="PackedScene" uid="uid://dbp3jgwxeuk2w" path="res://Scene/enemy.tscn" id="6_w1288"]
+[ext_resource type="PackedScene" uid="uid://ckyh7lca172jk" path="res://Scene/enemy.tscn" id="6_w1288"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0huiv"]
 texture = ExtResource("1_om7qi")
