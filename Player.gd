@@ -15,6 +15,8 @@ var animated_sprite : AnimatedSprite2D
  
 
 func _ready():
+	Global.positionX = position.x
+	Global.positionY = position.y
 	animated_sprite = $AnimatedSprite2D
 	load_sprite_sets()
 	set_sprite_set(Global.set_level_index)
@@ -80,3 +82,7 @@ func set_sprite_set(set_level_index: int):
 	if set_level_index < level_sprite_sets.size():
 		animated_sprite.frames = level_sprite_sets[set_level_index]
 		#current_level = level_index
+		
+func ResetPlayer():
+	position = Vector2(Global.positionX, Global.positionY)
+	Global.life -= 1

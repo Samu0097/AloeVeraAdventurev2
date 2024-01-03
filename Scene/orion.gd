@@ -1,10 +1,11 @@
 extends Node2D 
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	Global.set_level_index = 1
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_sea_void_body_entered(body):
+	if body.has_method("LoseLife"):
+		body.LoseLife()
+	if body is Player and Global.life == 0:
+		#Death Menu anzeigen lassen
+		pass
+	else:
+		if body.has_method("ResetPlayer"):
+			body.ResetPlayer()
