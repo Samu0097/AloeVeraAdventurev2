@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
 [ext_resource type="Texture2D" uid="uid://lqa71mujfqry" path="res://Assets/Seasonal Tilesets/4 - Winter World/Winter_entities (16 x 16).png" id="2_uc6xv"]
-[ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="3_te6mj"]
+[ext_resource type="PackedScene" path="res://Scene/player.tscn" id="3_te6mj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]
 texture = ExtResource("1_ku207")
