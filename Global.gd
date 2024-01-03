@@ -3,6 +3,11 @@ extends Node
 
 var coins = 0
 
+var life = 1
+
+var positionX
+var positionY
+
 var strength = 1
 var agility = 1
 
