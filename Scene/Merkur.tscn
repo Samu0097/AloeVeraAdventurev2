@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhot0r2wpqnf3"]
+[gd_scene load_steps=14 format=3 uid="uid://dhot0r2wpqnf3"]
 
 [ext_resource type="Texture2D" uid="uid://bwc6ywtjwcxke" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="1_bk1t5"]
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
+[ext_resource type="Script" path="res://Scene/Merkur.gd" id="1_omc33"]
 [ext_resource type="Texture2D" uid="uid://lqa71mujfqry" path="res://Assets/Seasonal Tilesets/4 - Winter World/Winter_entities (16 x 16).png" id="2_uc6xv"]
 [ext_resource type="Texture2D" uid="uid://do4optixxlap" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="3_chsny"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="3_te6mj"]
@@ -219,6 +220,7 @@ sources/2 = SubResource("TileSetAtlasSource_fbj7o")
 sources/3 = SubResource("TileSetAtlasSource_7rvay")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_omc33")
 
 [node name="CompleteStaticBg(288X208)10" type="Sprite2D" parent="."]
 position = Vector2(1322, 122)

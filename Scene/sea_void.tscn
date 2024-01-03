@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxsitsedy0wi3"]
+
+[ext_resource type="Script" path="res://Sea_Void.gd" id="1_yd80k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5snt"]
+size = Vector2(2964, 32)
+
+[node name="Sea_Void" type="Area2D"]
+script = ExtResource("1_yd80k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(130, 6)
+shape = SubResource("RectangleShape2D_j5snt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
