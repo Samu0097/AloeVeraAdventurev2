@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://1xppm1i3p24g"]
+[gd_scene load_steps=21 format=3 uid="uid://1xppm1i3p24g"]
 
 [ext_resource type="Script" path="res://Scene/herion.gd" id="1_3qdk8"]
 [ext_resource type="Texture2D" uid="uid://7g7537ojuufk" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="1_jk8ig"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c78bk34o70lvb" path="res://Assets/Portals/pink/1.png" id="10_o2iqs"]
 [ext_resource type="Texture2D" uid="uid://b0ffa8ijw42n1" path="res://Assets/Portals/pink/2.png" id="11_vsllc"]
 [ext_resource type="Texture2D" uid="uid://7vqwcoa0hnam" path="res://Assets/Portals/pink/3.png" id="12_tplux"]
+[ext_resource type="Script" path="res://Scene/FakePortal.gd" id="13_28cmo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05vpj"]
 texture = ExtResource("1_jk8ig")
@@ -631,7 +632,7 @@ layer_2/tile_data = PackedInt32Array(327662, 1048578, 5, -393232, 1048578, 5, -5
 position = Vector2(161, 100)
 
 [node name="SagonPortal" type="Area2D" parent="."]
-position = Vector2(-1569, -1871)
+position = Vector2(-1612, -1881)
 script = ExtResource("8_a8ilk")
 metadata/_edit_group_ = true
 
@@ -644,4 +645,84 @@ autoplay = "default"
 position = Vector2(1240, 1317)
 shape = SubResource("CapsuleShape2D_84bqy")
 
+[node name="FakePortal" type="Area2D" parent="."]
+position = Vector2(-1611, -1847)
+script = ExtResource("13_28cmo")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FakePortal"]
+position = Vector2(1240, 1317)
+sprite_frames = SubResource("SpriteFrames_slaur")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FakePortal"]
+position = Vector2(1240, 1317)
+shape = SubResource("CapsuleShape2D_84bqy")
+
+[node name="FakePortal2" type="Area2D" parent="."]
+position = Vector2(-2689, -1883)
+script = ExtResource("13_28cmo")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FakePortal2"]
+position = Vector2(1240, 1317)
+sprite_frames = SubResource("SpriteFrames_slaur")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FakePortal2"]
+position = Vector2(1240, 1317)
+shape = SubResource("CapsuleShape2D_84bqy")
+
+[node name="FakePortal3" type="Area2D" parent="."]
+position = Vector2(-1196, -1516)
+script = ExtResource("13_28cmo")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FakePortal3"]
+position = Vector2(1240, 1317)
+sprite_frames = SubResource("SpriteFrames_slaur")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FakePortal3"]
+position = Vector2(1240, 1317)
+shape = SubResource("CapsuleShape2D_84bqy")
+
+[node name="FakePortal4" type="Area2D" parent="."]
+position = Vector2(-1038, -1509)
+script = ExtResource("13_28cmo")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FakePortal4"]
+position = Vector2(1240, 1317)
+sprite_frames = SubResource("SpriteFrames_slaur")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FakePortal4"]
+position = Vector2(1240, 1317)
+shape = SubResource("CapsuleShape2D_84bqy")
+
+[node name="FakePortal5" type="AnimatedSprite2D" parent="."]
+position = Vector2(381, -383)
+sprite_frames = SubResource("SpriteFrames_slaur")
+autoplay = "default"
+
+[node name="FakePortal6" type="AnimatedSprite2D" parent="."]
+position = Vector2(-792, -324)
+sprite_frames = SubResource("SpriteFrames_slaur")
+autoplay = "default"
+
+[node name="FakePortal7" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1439, -521)
+sprite_frames = SubResource("SpriteFrames_slaur")
+autoplay = "default"
+
+[node name="FakePortal8" type="AnimatedSprite2D" parent="."]
+position = Vector2(-185, -113)
+sprite_frames = SubResource("SpriteFrames_slaur")
+autoplay = "default"
+
 [connection signal="body_entered" from="SagonPortal" to="SagonPortal" method="_on_body_entered"]
+[connection signal="body_entered" from="FakePortal" to="FakePortal" method="_on_body_entered"]
+[connection signal="body_entered" from="FakePortal2" to="FakePortal2" method="_on_body_entered"]
+[connection signal="body_entered" from="FakePortal3" to="FakePortal3" method="_on_body_entered"]
+[connection signal="body_entered" from="FakePortal4" to="FakePortal4" method="_on_body_entered"]
