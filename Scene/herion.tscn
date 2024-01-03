@@ -1,6 +1,5 @@
 [gd_scene load_steps=12 format=3 uid="uid://1xppm1i3p24g"]
 
-[ext_resource type="Script" path="res://Scene/herion.gd" id="1_3qdk8"]
 [ext_resource type="Texture2D" uid="uid://7g7537ojuufk" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="1_jk8ig"]
 [ext_resource type="Texture2D" uid="uid://bewql0qbavjnb" path="res://Assets/Assets/Background/Additional Sky.png" id="1_pb8fe"]
 [ext_resource type="Texture2D" uid="uid://b2ugrala6rpch" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="2_d17go"]
@@ -581,7 +580,6 @@ sources/2 = SubResource("TileSetAtlasSource_aspnf")
 sources/3 = SubResource("TileSetAtlasSource_bjo5u")
 
 [node name="Herion" type="Node2D"]
-script = ExtResource("1_3qdk8")
 
 [node name="AdditionalSky" type="Sprite2D" parent="."]
 position = Vector2(-279, -195.5)

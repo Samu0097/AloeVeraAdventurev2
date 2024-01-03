@@ -1,4 +1,4 @@
-class_name Player 
+class_name Player
 extends CharacterBody2D
 
 const SPEED = 200.0
@@ -7,7 +7,7 @@ const JUMP_VELOCITY = -250.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var JumpAvailability : bool
-var animated_sprite : AnimatedSprite2D
+@onready var animated_sprite = $AnimatedSprite2D
 @onready var JumpTimer : Timer = $JumpTimer
 
 @onready var level_sprite_sets: Array = [] #Alle SpriteSets
@@ -15,15 +15,9 @@ var animated_sprite : AnimatedSprite2D
  
 
 func _ready():
-	Global.positionX = position.x
-	Global.positionY = position.y
-	animated_sprite = $AnimatedSprite2D
 	load_sprite_sets()
-	set_sprite_set(Global.set_level_index)
-	print("Player: ", Global.set_level_index)
 
 func _physics_process(delta):
-	set_sprite_set(Global.set_level_index)
 	# Add the gravity.
 	if not is_on_floor() and JumpTimer.is_stopped():
 		velocity.y += gravity * delta
@@ -78,11 +72,7 @@ func load_sprite_sets():
 	level_sprite_sets.append(load("res://Assets/AloeChar/terminator-dead/dead.tres"))
 	level_sprite_sets.append(load("res://Assets/AloeChar/xmas/xmas.tres"))
 	
-func set_sprite_set(set_level_index: int):
-	if set_level_index < level_sprite_sets.size():
-		animated_sprite.frames = level_sprite_sets[set_level_index]
+func set_sprite_set(level_index: int):
+	if level_index < level_sprite_sets.size():
+		animated_sprite.frames = level_sprite_sets[level_index]
 		#current_level = level_index
-		
-func ResetPlayer():
-	position = Vector2(Global.positionX, Global.positionY)
-	Global.life -= 1
