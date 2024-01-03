@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="5_8c0h6"]
 [ext_resource type="Texture2D" uid="uid://cso0yb7pwwjhc" path="res://Assets/Assets/Spikes/Spikes.png" id="6_trwu3"]
 [ext_resource type="PackedScene" uid="uid://dbp3jgwxeuk2w" path="res://Scene/enemy.tscn" id="6_w1288"]
-[ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="7_mpdmi"]
+[ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://coin.tscn" id="7_mpdmi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0huiv"]
 texture = ExtResource("1_om7qi")
