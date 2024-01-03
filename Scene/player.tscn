@@ -78,6 +78,7 @@ animations = [{
 script = ExtResource("1_uxijk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.92, 0.92)
 shape = SubResource("CapsuleShape2D_22831")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -86,6 +87,13 @@ scale = Vector2(0.59375, 0.5)
 sprite_frames = SubResource("SpriteFrames_8fjgo")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.632096
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+
+[node name="JumpTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="JumpTimer" to="." method="_on_jump_timer_timeout"]
