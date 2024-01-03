@@ -636,13 +636,8 @@ frame_progress = 0.633488
 position = Vector2(1240, 1317)
 shape = SubResource("CapsuleShape2D_y1er0")
 
-[node name="FakePortal4" type="Area2D" parent="."]
-position = Vector2(-1260, -1545)
-script = ExtResource("15_7b7aj")
-metadata/_edit_group_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FakePortal4"]
-position = Vector2(1240, 1317)
+[node name="FakePortal4" type="AnimatedSprite2D" parent="."]
+position = Vector2(-20, -228)
 sprite_frames = SubResource("SpriteFrames_mtsxm")
 autoplay = "default"
 frame = 2
@@ -652,4 +647,3 @@ frame_progress = 0.633488
 [connection signal="body_entered" from="FakePortal" to="FakePortal" method="_on_body_entered"]
 [connection signal="body_entered" from="FakePortal2" to="FakePortal2" method="_on_body_entered"]
 [connection signal="body_entered" from="FakePortal3" to="FakePortal3" method="_on_body_entered"]
-[connection signal="body_entered" from="FakePortal4" to="FakePortal4" method="_on_body_entered"]
