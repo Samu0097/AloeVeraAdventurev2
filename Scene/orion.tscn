@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://de5cunaic7w2c"]
+[gd_scene load_steps=17 format=3 uid="uid://de5cunaic7w2c"]
 
 [ext_resource type="Texture2D" uid="uid://cnee2aeec6la0" path="res://Assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_om7qi"]
 [ext_resource type="Script" path="res://Scene/orion.gd" id="1_tcq53"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cso0yb7pwwjhc" path="res://Assets/Assets/Spikes/Spikes.png" id="6_trwu3"]
 [ext_resource type="PackedScene" uid="uid://dbp3jgwxeuk2w" path="res://Scene/enemy.tscn" id="6_w1288"]
 [ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="7_mpdmi"]
+[ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="10_onoi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0huiv"]
 texture = ExtResource("1_om7qi")
@@ -541,3 +542,6 @@ position = Vector2(73, -68)
 
 [node name="Coin" parent="." instance=ExtResource("7_mpdmi")]
 position = Vector2(391, -30)
+
+[node name="Sea_Void" parent="." instance=ExtResource("10_onoi4")]
+position = Vector2(441, 394)
