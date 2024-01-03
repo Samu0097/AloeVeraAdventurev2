@@ -27,9 +27,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ar4bc"]
-size = Vector2(12, 12)
+size = Vector2(10, 10)
 
 [node name="lifeGem" type="Area2D"]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_0qugo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
