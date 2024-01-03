@@ -1,7 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://djrd26ymv67k5"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://fwr80xi03q7j"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://oac531t2j3af" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Bubbling_Oil_frames (16 x 32).png" id="1_o5l2v"]
-[ext_resource type="PackedScene" path="res://Scene/player.tscn" id="2_6ascl"]
+[ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="2_6ascl"]
+[ext_resource type="PackedScene" uid="uid://ckyh7lca172jk" path="res://Scene/enemy.tscn" id="3_7cvjj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48xt8"]
 texture = ExtResource("1_o5l2v")
@@ -26,3 +31,18 @@ layer_0/tile_data = PackedInt32Array(-4, 0, 0, 65532, 0, 1, -3, 65536, 0, 65533,
 
 [node name="Player" parent="." instance=ExtResource("2_6ascl")]
 position = Vector2(23, -42)
+
+[node name="Enemy" parent="." instance=ExtResource("3_7cvjj")]
+position = Vector2(-20, -53)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_7cvjj")]
+position = Vector2(-71, -49)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_7cvjj")]
+position = Vector2(-51, -17)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_7cvjj")]
+position = Vector2(-41, -95)
+
+[node name="Enemy5" parent="." instance=ExtResource("3_7cvjj")]
+position = Vector2(-100, -89)
