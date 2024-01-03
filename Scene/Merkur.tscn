@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dhot0r2wpqnf3"]
+[gd_scene load_steps=21 format=3 uid="uid://dhot0r2wpqnf3"]
 
 [ext_resource type="Texture2D" uid="uid://bwc6ywtjwcxke" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="1_bk1t5"]
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
@@ -8,6 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="3_te6mj"]
 [ext_resource type="Texture2D" uid="uid://66nt8fce43di" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="4_mnkma"]
 [ext_resource type="PackedScene" uid="uid://dbp3jgwxeuk2w" path="res://Scene/enemy.tscn" id="7_gsjho"]
+[ext_resource type="Script" path="res://Scene/GreenPortal.gd" id="9_w1ni6"]
+[ext_resource type="Texture2D" uid="uid://cwkxue2cppx2t" path="res://Assets/Portals/green/0.png" id="10_cab2t"]
+[ext_resource type="Texture2D" uid="uid://duvummyischeu" path="res://Assets/Portals/green/1.png" id="11_ojsh6"]
+[ext_resource type="Texture2D" uid="uid://4t0q8q7iyh3p" path="res://Assets/Portals/green/2.png" id="12_vrejj"]
+[ext_resource type="Texture2D" uid="uid://blmspv6cye4pm" path="res://Assets/Portals/green/3.png" id="13_pprou"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]
 texture = ExtResource("1_ku207")
@@ -219,6 +224,30 @@ sources/1 = SubResource("TileSetAtlasSource_ineoi")
 sources/2 = SubResource("TileSetAtlasSource_fbj7o")
 sources/3 = SubResource("TileSetAtlasSource_7rvay")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_rndcq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_cab2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ojsh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vrejj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pprou")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u5ehr"]
+radius = 5.0
+height = 18.0
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_omc33")
 
@@ -292,7 +321,22 @@ layer_2/name = "extras"
 layer_2/tile_data = PackedInt32Array(524298, 65537, 1, 524299, 65537, 1, 524300, 65537, 1, 589833, 589825, 1, 589834, 655361, 1, 589835, 655361, 1, 589836, 655361, 1, 589837, 720897, 1, 983104, 327681, 1, 1245241, 327681, 1, 1507392, 327681, 1, 1769532, 327681, 1, 3538966, 327681, 1, 3538967, 327681, 1, 3538968, 327681, 1, 2883622, 65537, 1, 3604519, 196609, 5, 3604520, 196609, 5, 3604521, 196609, 5, 3604522, 196609, 5, 3604523, 196609, 5, 2949140, 196609, 5, 2949141, 196609, 5, 1703974, 65537, 5, 1703976, 65537, 5, 1703978, 65537, 5, 1703980, 65537, 5, 1703982, 65537, 5, 851998, 196609, 5, 851999, 196609, 5, 852019, 196609, 5, 3604490, 655361, 1, 3604491, 655361, 1, 3604492, 655361, 1, 3604493, 655361, 1, 3604489, 589825, 1, 3538954, 65537, 1, 3538955, 65537, 1, 3538956, 65537, 1, 3538957, 65537, 1, 3604494, 720897, 1, 3538961, 65537, 1, 3604496, 589825, 1, 3604498, 720897, 1, 3604497, 655361, 1, 5308491, 65537, 1, 5308492, 65537, 1, 5374026, 589825, 1, 5374029, 720897, 1, 5374028, 655361, 1, 5374027, 655361, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_te6mj")]
-position = Vector2(268, 107)
+position = Vector2(1023, 1298)
 
 [node name="Enemy" parent="." instance=ExtResource("7_gsjho")]
-position = Vector2(295, 139)
+position = Vector2(614, 123)
+
+[node name="GreenPortal" type="Area2D" parent="."]
+script = ExtResource("9_w1ni6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GreenPortal"]
+position = Vector2(1240, 1317)
+sprite_frames = SubResource("SpriteFrames_rndcq")
+autoplay = "default"
+frame_progress = 0.995071
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GreenPortal"]
+position = Vector2(1240, 1317)
+shape = SubResource("CapsuleShape2D_u5ehr")
+
+[connection signal="body_entered" from="GreenPortal" to="GreenPortal" method="_on_body_entered"]
