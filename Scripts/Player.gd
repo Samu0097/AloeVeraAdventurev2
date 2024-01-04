@@ -93,9 +93,5 @@ func ResetPlayer():
 	Global.life -= 1
 	get_node("Camera2D/Life/LifeScore").text = str(Global.life)
 	
-func StatusUpdate():
-	get_node("Camera2D/Life/LifeScore").text = str(Global.life)
-	get_node("Camera2D/Coins/CoinsScore").text = str(Global.coins)
-	
 func Portal():
 	position = Vector2(Global.positionX, Global.positionY)
