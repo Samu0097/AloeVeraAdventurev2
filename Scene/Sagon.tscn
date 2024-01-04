@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cq37m60h21qk8"]
+[gd_scene load_steps=31 format=3 uid="uid://cq37m60h21qk8"]
 
 [ext_resource type="Script" path="res://Scripts/RunPortal.gd" id="1_jyk84"]
 [ext_resource type="Texture2D" uid="uid://cp4df650i4106" path="res://Assets/Portals/purple/0.png" id="2_pcitq"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dsmwqajiooga5" path="res://Assets/Portals/dark/1.png" id="19_efjbx"]
 [ext_resource type="Texture2D" uid="uid://cw1kit6sd5gdl" path="res://Assets/Portals/dark/2.png" id="20_ggcof"]
 [ext_resource type="Texture2D" uid="uid://dy3l42ikfvlf" path="res://Assets/Portals/dark/3.png" id="21_3f1wh"]
+[ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="22_j72l8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ix50y"]
 animations = [{
@@ -226,6 +227,10 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HerionPortal2"]
 shape = SubResource("CapsuleShape2D_qg25t")
+
+[node name="Sea_Void" parent="." instance=ExtResource("22_j72l8")]
+position = Vector2(-24, 3993)
+scale = Vector2(29.48, 1)
 
 [connection signal="body_entered" from="RunPortal" to="RunPortal" method="_on_body_entered"]
 [connection signal="body_entered" from="SagonPortal" to="SagonPortal" method="_on_body_entered"]

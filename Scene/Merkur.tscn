@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dhot0r2wpqnf3"]
+[gd_scene load_steps=24 format=3 uid="uid://dhot0r2wpqnf3"]
 
 [ext_resource type="Texture2D" uid="uid://bwc6ywtjwcxke" path="res://Assets/Seasonal Tilesets/4 - Winter World/Background parts/_Complete_static_BG_(288 x 208).png" id="1_bk1t5"]
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://4t0q8q7iyh3p" path="res://Assets/Portals/green/2.png" id="12_vrejj"]
 [ext_resource type="Texture2D" uid="uid://blmspv6cye4pm" path="res://Assets/Portals/green/3.png" id="13_pprou"]
 [ext_resource type="Script" path="res://Scripts/FakePortal.gd" id="14_8hdqi"]
+[ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="15_hfb41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]
 texture = ExtResource("1_ku207")
@@ -414,6 +415,9 @@ sprite_frames = SubResource("SpriteFrames_rndcq")
 autoplay = "default"
 frame = 3
 frame_progress = 0.330626
+
+[node name="Sea_Void" parent="." instance=ExtResource("15_hfb41")]
+position = Vector2(708, 1516)
 
 [connection signal="body_entered" from="GreenPortal" to="GreenPortal" method="_on_body_entered"]
 [connection signal="body_entered" from="FakePortal" to="FakePortal" method="_on_body_entered"]
