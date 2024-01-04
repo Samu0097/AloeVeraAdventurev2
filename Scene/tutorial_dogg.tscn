@@ -1,7 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://be410ygscs100"]
+[gd_scene load_steps=21 format=3 uid="uid://be410ygscs100"]
 
+[ext_resource type="Script" path="res://Assets/Tutorial Dogg/tutorial_dogg.gd" id="1_fxupr"]
 [ext_resource type="Texture2D" uid="uid://daqg0v7r6enxb" path="res://Assets/Tutorial Dogg/Tutorial-Dogg 2.png" id="1_n5ucc"]
-[ext_resource type="Texture2D" uid="uid://bjn7swdcvx52e" path="res://Assets/Tutorial Dogg/idle.png" id="3_pyson"]
+[ext_resource type="Texture2D" uid="uid://dkt0hv7mwel0f" path="res://Assets/Tutorial Dogg/idle/0.png" id="3_ta8uq"]
+[ext_resource type="Texture2D" uid="uid://so06hanf2mrg" path="res://Assets/Tutorial Dogg/idle/1.png" id="4_d2goq"]
+[ext_resource type="Texture2D" uid="uid://c5gavp25ifdby" path="res://Assets/Tutorial Dogg/cloud.png" id="4_rlor0"]
+[ext_resource type="Texture2D" uid="uid://bm348kwhan5is" path="res://Assets/Tutorial Dogg/idle/2.png" id="5_s0q61"]
+[ext_resource type="FontFile" uid="uid://4qdmvmo80wcf" path="res://Assets/Tutorial Dogg/LongCang-Regular.ttf" id="7_fr0uy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vi20y"]
 atlas = ExtResource("1_n5ucc")
@@ -34,18 +39,6 @@ region = Rect2(768, 0, 128, 96)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bx3ab"]
 atlas = ExtResource("1_n5ucc")
 region = Rect2(896, 0, 128, 96)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0y3wi"]
-atlas = ExtResource("3_pyson")
-region = Rect2(0, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jydtq"]
-atlas = ExtResource("3_pyson")
-region = Rect2(32, 0, 32, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kwqwm"]
-atlas = ExtResource("3_pyson")
-region = Rect2(64, 0, 32, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oq7lh"]
 animations = [{
@@ -80,23 +73,81 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0y3wi")
+"texture": ExtResource("3_ta8uq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jydtq")
+"texture": ExtResource("4_d2goq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kwqwm")
+"texture": ExtResource("5_s0q61")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 2.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_or32g"]
+atlas = ExtResource("4_rlor0")
+region = Rect2(0, 0, 102, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtgnl"]
+atlas = ExtResource("4_rlor0")
+region = Rect2(102, 0, 102, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx6n5"]
+atlas = ExtResource("4_rlor0")
+region = Rect2(204, 0, 102, 78)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anv30"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or32g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtgnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx6n5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
 [node name="TutorialDogg" type="Node2D"]
+script = ExtResource("1_fxupr")
 
 [node name="Dogg" type="AnimatedSprite2D" parent="."]
+position = Vector2(12, -3)
 sprite_frames = SubResource("SpriteFrames_oq7lh")
-animation = &"idle"
+animation = &"cloud"
 autoplay = "idle"
-frame_progress = 0.244774
+frame = 7
+frame_progress = 1.0
+
+[node name="Cloud" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(22, -12)
+sprite_frames = SubResource("SpriteFrames_anv30")
+autoplay = "default"
+frame_progress = 0.150603
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Cloud"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+offset_left = -36.0
+offset_top = -27.0
+offset_right = 568.0
+offset_bottom = 411.0
+scale = Vector2(0.12, 0.12)
+auto_translate = false
+localize_numeral_system = false
+theme_override_fonts/normal_font = ExtResource("7_fr0uy")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center][color=black]Fo shizzle! If I'm channeling my inner Doggy, what's crackalackin'? Drop some NEW GAME, and I'll hit you up with that ALOE flavor."
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+text_direction = 1
