@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://Scripts/FakePortal.gd" id="13_28cmo"]
 [ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="14_xx4bq"]
 [ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="15_5gcmt"]
-[ext_resource type="PackedScene" uid="uid://cq7h3nh8oy2ic" path="res://Scene/checkpoint.tscn" id="16_2xwpu"]
+[ext_resource type="PackedScene" path="res://Scene/checkpoint.tscn" id="16_2xwpu"]
 [ext_resource type="PackedScene" uid="uid://btob38i8tc80b" path="res://Scene/life_gem.tscn" id="17_jh2di"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05vpj"]
