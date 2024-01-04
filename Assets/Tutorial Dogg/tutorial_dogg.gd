@@ -9,6 +9,8 @@ var use_text = 0
 var print_text = false
 var check_credits = false
 
+signal intro_audio2()
+
 var exit_count = Global.exitCount
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,6 +37,7 @@ func _process(delta):
 		
 	elif check_intro==false and elapsed_time >=0.2 and use_text==0 and print_text==true:
 		cloud()
+		emit_signal("intro_audio2")
 		active_label.text = "[center]" + "Nah, nah, don't be hittin' that quit button just yet. Life's a game, and you gotta stay in it, my friend. We rollin' together, so let's keep it going."
 		print_text=false
 		

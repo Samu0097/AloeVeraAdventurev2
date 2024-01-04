@@ -47,6 +47,8 @@ text = "Credits"
 [node name="introAudio" type="AudioStreamPlayer" parent="Intro"]
 stream = ExtResource("2_gd6rk")
 
+[node name="introAudio2" type="AudioStreamPlayer" parent="Intro"]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 zoom = Vector2(3.375, 3.375)
@@ -59,3 +61,4 @@ position = Vector2(166, 115)
 [connection signal="pressed" from="Intro/Exit" to="Intro" method="_on_exit_pressed"]
 [connection signal="pressed" from="Intro/Credits" to="Intro" method="_on_credits_pressed"]
 [connection signal="finished" from="Intro/introAudio" to="Intro" method="_on_intro_audio_finished"]
+[connection signal="intro_audio2" from="TutorialDogg" to="Intro" method="_on_tutorial_dogg_intro_audio_2"]
