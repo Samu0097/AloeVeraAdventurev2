@@ -13,4 +13,5 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body is Player:
+		Global.Coins += 100
 		get_tree().change_scene_to_file("res://Scene/game_over_screen.tscn")
