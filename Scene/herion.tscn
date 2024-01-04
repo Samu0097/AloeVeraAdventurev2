@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://1xppm1i3p24g"]
+[gd_scene load_steps=29 format=3 uid="uid://1xppm1i3p24g"]
 
 [ext_resource type="Script" path="res://Scripts/herion.gd" id="1_3qdk8"]
 [ext_resource type="Texture2D" uid="uid://7g7537ojuufk" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="1_jk8ig"]
@@ -15,11 +15,12 @@
 [ext_resource type="Script" path="res://Scripts/FakePortal.gd" id="13_28cmo"]
 [ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="14_xx4bq"]
 [ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="15_5gcmt"]
-[ext_resource type="PackedScene" path="res://Scene/checkpoint.tscn" id="16_2xwpu"]
+[ext_resource type="PackedScene" uid="uid://cq7h3nh8oy2ic" path="res://Scene/checkpoint.tscn" id="16_2xwpu"]
 [ext_resource type="PackedScene" uid="uid://btob38i8tc80b" path="res://Scene/life_gem.tscn" id="17_jh2di"]
-[ext_resource type="PackedScene" uid="uid://bleryi6pkl4g4" path="res://Scene/schild.tscn" id="18_qiktq"]
-[ext_resource type="PackedScene" uid="uid://b8ns7ntqjc2yg" path="res://Scene/randolf.tscn" id="19_uyyud"]
-[ext_resource type="PackedScene" path="res://Scene/faker.tscn" id="20_ikpiy"]
+[ext_resource type="PackedScene" uid="uid://lyacnc1sycxt" path="res://Scene/schild.tscn" id="18_qiktq"]
+[ext_resource type="PackedScene" uid="uid://bgsii6kq4frdj" path="res://Scene/randolf.tscn" id="19_uyyud"]
+[ext_resource type="PackedScene" uid="uid://d4mpbwvl1vnma" path="res://Scene/faker.tscn" id="20_ikpiy"]
+[ext_resource type="PackedScene" uid="uid://dgk1q45g3g6m7" path="res://Scene/deathzone.tscn" id="21_h1eww"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05vpj"]
 texture = ExtResource("1_jk8ig")
@@ -944,6 +945,16 @@ position = Vector2(12, -378)
 
 [node name="faker" parent="." instance=ExtResource("20_ikpiy")]
 position = Vector2(-601, -107)
+
+[node name="Deathzone" parent="." instance=ExtResource("21_h1eww")]
+position = Vector2(-742, -182)
+
+[node name="Deathzone2" parent="." instance=ExtResource("21_h1eww")]
+position = Vector2(-1384, -534)
+scale = Vector2(0.60988, 0.613949)
+
+[node name="Coin" parent="." instance=ExtResource("15_5gcmt")]
+position = Vector2(216, -198)
 
 [connection signal="body_entered" from="SagonPortal" to="SagonPortal" method="_on_body_entered"]
 [connection signal="body_entered" from="FakePortal" to="FakePortal" method="_on_body_entered"]
