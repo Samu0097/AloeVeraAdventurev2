@@ -25,6 +25,7 @@ func _ready():
 	load_sprite_sets()
 	set_sprite_set(Global.set_level_index)
 	print("Player: ", Global.set_level_index)
+	StatusUpdate()
 
 func _physics_process(delta):
 	set_sprite_set(Global.set_level_index)

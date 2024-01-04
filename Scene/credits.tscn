@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcaxkcpwqpkyd"]
+[gd_scene load_steps=4 format=3 uid="uid://dcaxkcpwqpkyd"]
 
 [ext_resource type="Script" path="res://Scripts/exit.gd" id="1_e20da"]
+[ext_resource type="AudioStream" uid="uid://dj4f4s7t1wy6n" path="res://Assets/Tutorial Dogg/Sound/12_credits.mp3" id="2_p11gm"]
 [ext_resource type="PackedScene" uid="uid://be410ygscs100" path="res://Scene/tutorial_dogg.tscn" id="2_xpcae"]
 
 [node name="Credits" type="Node2D"]
@@ -50,8 +51,12 @@ icon_alignment = 1
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 176.0
-text = "Made by: Linda Samu Mia Pascal
+bbcode_enabled = true
+text = "[center]Made by: Linda Samu Mia Pascal
 Niklas"
+
+[node name="aC" type="AudioStreamPlayer" parent="Credits"]
+stream = ExtResource("2_p11gm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -64,3 +69,4 @@ position = Vector2(166, 115)
 [connection signal="pressed" from="Credits/New Game" to="Credits" method="_on_new_game_pressed"]
 [connection signal="pressed" from="Credits/New Game2" to="Credits" method="_on_new_game_pressed"]
 [connection signal="pressed" from="Credits/New Game3" to="Credits" method="_on_new_game_pressed"]
+[connection signal="credits_00" from="TutorialDogg" to="Credits" method="_on_tutorial_dogg_credits_00"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dhot0r2wpqnf3"]
+[gd_scene load_steps=30 format=3 uid="uid://dhot0r2wpqnf3"]
 
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
 [ext_resource type="Script" path="res://Scripts/Merkur.gd" id="1_omc33"]
@@ -15,8 +15,10 @@
 [ext_resource type="Script" path="res://Scripts/FakePortal.gd" id="14_8hdqi"]
 [ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="14_8li40"]
 [ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="15_8aui4"]
-[ext_resource type="PackedScene" uid="uid://bleryi6pkl4g4" path="res://Scene/schild.tscn" id="16_ma05t"]
-[ext_resource type="PackedScene" path="res://Scene/trader.tscn" id="17_pw8pq"]
+[ext_resource type="PackedScene" uid="uid://lyacnc1sycxt" path="res://Scene/schild.tscn" id="16_ma05t"]
+[ext_resource type="Texture2D" uid="uid://b31h7qmwn0pv4" path="res://Assets/AloeChar/pink/idle/0.png" id="17_djyl5"]
+[ext_resource type="PackedScene" uid="uid://b1evdviu023od" path="res://Scene/trader.tscn" id="17_pw8pq"]
+[ext_resource type="Texture2D" uid="uid://c3ldwq5opqk66" path="res://Assets/AloeChar/pink/idle/1.png" id="18_1n8p6"]
 [ext_resource type="PackedScene" uid="uid://btob38i8tc80b" path="res://Scene/life_gem.tscn" id="18_31gtv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]
@@ -256,6 +258,20 @@ height = 18.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ceh6w"]
 radius = 5.0
 height = 18.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oxx7y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_djyl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1n8p6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_omc33")
@@ -575,6 +591,29 @@ scale = Vector2(0.0883286, 0.280475)
 text = "Press E to interact"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Schild9" parent="tutorial_schilder" instance=ExtResource("16_ma05t")]
+position = Vector2(213, 139)
+scale = Vector2(4.24, 2.24)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tutorial_schilder/Schild9"]
+position = Vector2(-0.235849, 6.69644)
+scale = Vector2(0.162132, 0.361978)
+sprite_frames = SubResource("SpriteFrames_oxx7y")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="tutorial_schilder/Schild9"]
+offset_left = -10.8491
+offset_top = -11.6072
+offset_right = 267.151
+offset_bottom = 89.3928
+scale = Vector2(0.0816578, 0.187413)
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "You Lost Your Coins,
+ In The Endless Crazy Dimensions.
+You need to gona Cash them all."
+horizontal_alignment = 1
 
 [node name="Trader" parent="." instance=ExtResource("17_pw8pq")]
 position = Vector2(163, 1317)
