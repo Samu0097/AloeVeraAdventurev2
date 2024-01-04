@@ -619,7 +619,7 @@ script = ExtResource("1_3qdk8")
 
 [node name="AdditionalSky" type="Sprite2D" parent="."]
 position = Vector2(-357, -223)
-scale = Vector2(78.8438, 39.3125)
+scale = Vector2(220.64, 45.1925)
 texture = ExtResource("1_pb8fe")
 
 [node name="TileMap" type="TileMap" parent="."]
