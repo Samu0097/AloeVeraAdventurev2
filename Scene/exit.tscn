@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvrqrxe2vwcs1"]
+[gd_scene load_steps=3 format=3 uid="uid://cvrqrxe2vwcs1"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_ailnr"]
+[ext_resource type="PackedScene" uid="uid://be410ygscs100" path="res://Scene/tutorial_dogg.tscn" id="2_fwm5d"]
 
 [node name="Exit" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Exit" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -15,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ailnr")
 
-[node name="New Game" type="Button" parent="Control"]
+[node name="New Game" type="Button" parent="Exit"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
@@ -25,7 +26,7 @@ action_mode = 0
 text = "Really?"
 icon_alignment = 1
 
-[node name="Exit" type="Button" parent="Control"]
+[node name="Exit" type="Button" parent="Exit"]
 layout_mode = 0
 offset_left = 208.0
 offset_top = 40.0
@@ -34,7 +35,7 @@ offset_bottom = 88.0
 text = "Yes
 "
 
-[node name="Credits" type="Button" parent="Control"]
+[node name="Credits" type="Button" parent="Exit"]
 layout_mode = 0
 offset_left = 144.0
 offset_top = 128.0
@@ -46,6 +47,10 @@ text = "No"
 anchor_mode = 0
 zoom = Vector2(3.375, 3.375)
 
-[connection signal="pressed" from="Control/New Game" to="Control" method="_on_new_game_pressed"]
-[connection signal="pressed" from="Control/Exit" to="Control" method="_on_exit_pressed"]
-[connection signal="pressed" from="Control/Credits" to="Control" method="_on_credits_pressed"]
+[node name="TutorialDogg" parent="." instance=ExtResource("2_fwm5d")]
+position = Vector2(160, 120)
+
+[connection signal="ready" from="Exit" to="TutorialDogg" method="_on_exit_ready"]
+[connection signal="pressed" from="Exit/New Game" to="Exit" method="_on_new_game_pressed"]
+[connection signal="pressed" from="Exit/Exit" to="Exit" method="_on_exit_pressed"]
+[connection signal="pressed" from="Exit/Credits" to="Exit" method="_on_credits_pressed"]
