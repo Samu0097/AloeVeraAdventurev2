@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://tsw3ilff7h8o"]
 
 [ext_resource type="Script" path="res://Scripts/intro.gd" id="1_u4hiw"]
-[ext_resource type="PackedScene" uid="uid://b33llhr60u5ga" path="res://Assets/Tutorial Dogg/tutorial_dogg_long.tscn" id="3_e2h7h"]
+[ext_resource type="PackedScene" path="res://Assets/Tutorial Dogg/tutorial_dogg_long.tscn" id="3_e2h7h"]
 
 [node name="Intro" type="Node2D"]
 
