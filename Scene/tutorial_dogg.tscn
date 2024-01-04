@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://be410ygscs100"]
+
+[ext_resource type="Texture2D" uid="uid://daqg0v7r6enxb" path="res://Assets/Tutorial Dogg/Tutorial-Dogg 2.png" id="1_n5ucc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi20y"]
+atlas = ExtResource("1_n5ucc")
+region = Rect2(0, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjcj4"]
+atlas = ExtResource("1_n5ucc")
+region = Rect2(128, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnjx8"]
+atlas = ExtResource("1_n5ucc")
+region = Rect2(256, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roa42"]
+atlas = ExtResource("1_n5ucc")
+region = Rect2(384, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pt7i"]
+atlas = ExtResource("1_n5ucc")
+region = Rect2(512, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vi14"]
+atlas = ExtResource("1_n5ucc")
+region = Rect2(640, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cekad"]
+atlas = ExtResource("1_n5ucc")
+region = Rect2(768, 0, 128, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx3ab"]
+atlas = ExtResource("1_n5ucc")
+region = Rect2(896, 0, 128, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oq7lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi20y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjcj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnjx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roa42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pt7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vi14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cekad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bx3ab")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="TutorialDogg" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_oq7lh")
+frame_progress = 0.2548
