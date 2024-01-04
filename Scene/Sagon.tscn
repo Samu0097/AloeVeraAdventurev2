@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cq37m60h21qk8"]
+[gd_scene load_steps=36 format=3 uid="uid://cq37m60h21qk8"]
 
 [ext_resource type="Texture2D" uid="uid://bht0a0t254o3o" path="res://Assets/Background/P_Background.png" id="1_b3qsk"]
 [ext_resource type="Script" path="res://Scripts/RunPortal.gd" id="1_jyk84"]
@@ -22,6 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://dsmwqajiooga5" path="res://Assets/Portals/dark/1.png" id="19_efjbx"]
 [ext_resource type="Texture2D" uid="uid://cw1kit6sd5gdl" path="res://Assets/Portals/dark/2.png" id="20_ggcof"]
 [ext_resource type="Texture2D" uid="uid://dy3l42ikfvlf" path="res://Assets/Portals/dark/3.png" id="21_3f1wh"]
+[ext_resource type="PackedScene" uid="uid://bleryi6pkl4g4" path="res://Scene/schild.tscn" id="23_wkp1o"]
+[ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="24_nvvos"]
+[ext_resource type="Texture2D" uid="uid://bnxce14l2gvip" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="25_o86fh"]
+[ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="22_j72l8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ix50y"]
 animations = [{
@@ -119,6 +123,59 @@ animations = [{
 radius = 5.0
 height = 18.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6vxv"]
+texture = ExtResource("25_o86fh")
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+7:1/0 = 0
+7:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:1/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+6:4/0 = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+7:4/0 = 0
+7:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:4/0/physics_layer_0/angular_velocity = 0.0
+9:4/0 = 0
+9:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:4/0/physics_layer_0/angular_velocity = 0.0
+9:1/0 = 0
+9:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:1/0/physics_layer_0/angular_velocity = 0.0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_553nl"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_g6vxv")
+
 [node name="Sagon" type="Node2D"]
 
 [node name="PBackground" type="Sprite2D" parent="."]
@@ -143,7 +200,7 @@ position = Vector2(-6, 1)
 shape = SubResource("CapsuleShape2D_0hgnp")
 
 [node name="Player" parent="." instance=ExtResource("6_euask")]
-position = Vector2(-16, -1)
+position = Vector2(9, -9)
 
 [node name="SagonPortal" type="Area2D" parent="."]
 position = Vector2(40, 1720)
@@ -232,6 +289,55 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HerionPortal2"]
 shape = SubResource("CapsuleShape2D_qg25t")
+
+[node name="schilder" type="Node2D" parent="."]
+
+[node name="Schild3" parent="schilder" instance=ExtResource("23_wkp1o")]
+position = Vector2(-71, 865)
+scale = Vector2(1, 10.64)
+
+[node name="Coin" parent="schilder/Schild3" instance=ExtResource("24_nvvos")]
+position = Vector2(0, 8.92858)
+scale = Vector2(1, 0.093985)
+
+[node name="Schild" parent="schilder" instance=ExtResource("23_wkp1o")]
+position = Vector2(-15, 420)
+scale = Vector2(1, 10.64)
+
+[node name="Coin" parent="schilder/Schild" instance=ExtResource("24_nvvos")]
+position = Vector2(0, 8.92858)
+scale = Vector2(1, 0.093985)
+
+[node name="Schild2" parent="schilder" instance=ExtResource("23_wkp1o")]
+position = Vector2(58, 1336)
+scale = Vector2(1, 10.64)
+
+[node name="Coin" parent="schilder/Schild2" instance=ExtResource("24_nvvos")]
+position = Vector2(0, 8.92858)
+scale = Vector2(1, 0.093985)
+
+[node name="Schild4" parent="schilder" instance=ExtResource("23_wkp1o")]
+position = Vector2(8, -7)
+
+[node name="0" type="Sprite2D" parent="schilder/Schild4"]
+position = Vector2(-27, 36)
+texture = ExtResource("18_nhmpt")
+
+[node name="Label" type="Label" parent="schilder/Schild4"]
+offset_left = -20.0
+offset_top = -39.0
+offset_right = 27.0
+offset_bottom = -16.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Sagon"
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_553nl")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 589824, 1)
+[node name="Sea_Void" parent="." instance=ExtResource("22_j72l8")]
+position = Vector2(-24, 3993)
+scale = Vector2(29.48, 1)
 
 [connection signal="body_entered" from="RunPortal" to="RunPortal" method="_on_body_entered"]
 [connection signal="body_entered" from="SagonPortal" to="SagonPortal" method="_on_body_entered"]
