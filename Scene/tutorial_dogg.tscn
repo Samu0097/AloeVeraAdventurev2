@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://danvhh2p4foyt"]
+[gd_scene load_steps=15 format=3 uid="uid://be410ygscs100"]
 
 [ext_resource type="Texture2D" uid="uid://daqg0v7r6enxb" path="res://Assets/Tutorial Dogg/Tutorial-Dogg 2.png" id="1_n5ucc"]
+[ext_resource type="Texture2D" uid="uid://bjn7swdcvx52e" path="res://Assets/Tutorial Dogg/idle.png" id="3_pyson"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vi20y"]
 atlas = ExtResource("1_n5ucc")
@@ -34,6 +35,18 @@ region = Rect2(768, 0, 128, 96)
 atlas = ExtResource("1_n5ucc")
 region = Rect2(896, 0, 128, 96)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0y3wi"]
+atlas = ExtResource("3_pyson")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jydtq"]
+atlas = ExtResource("3_pyson")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwqwm"]
+atlas = ExtResource("3_pyson")
+region = Rect2(64, 0, 32, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_oq7lh"]
 animations = [{
 "frames": [{
@@ -61,13 +74,29 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bx3ab")
 }],
-"loop": true,
-"name": &"default",
+"loop": false,
+"name": &"cloud",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0y3wi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jydtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwqwm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
 }]
 
 [node name="TutorialDogg" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Dogg" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_oq7lh")
-frame_progress = 0.5964
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.244774
