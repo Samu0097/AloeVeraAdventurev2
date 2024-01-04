@@ -7,6 +7,7 @@ var elapsed_time = 0
 var use_text = 0
 @onready var active_label = RichTextLabel
 var print_text = false
+var check_credits = false
 
 var exit_count = Global.exitCount
 # Called when the node enters the scene tree for the first time.
@@ -20,14 +21,12 @@ func _ready():
 func _process(delta):
 	elapsed_time += delta
 	
-	if check_intro==true and elapsed_time >= 2.99  and use_text==0 and print_text==true:
-		print("cloud on")
+	if check_intro==true and elapsed_time >= 0.99  and use_text==0 and print_text==true:
 		cloud()
 		use_text +=1
 		print(active_label.text)
 		
 	elif check_intro==true and elapsed_time >= 18.99  and use_text==1 and print_text==true:
-		print("cloud on")
 		$Cloud.visible = not $Cloud.visible
 		cloud()
 		active_label.text = "[center]" + "Ayy, it's time to roll the dice and start a new game, my friend. Let's see what kind of moves you're gonna make. Game on!"
@@ -35,7 +34,6 @@ func _process(delta):
 		print(active_label.text)
 		
 	elif check_intro==false and elapsed_time >=0.2 and use_text==0 and print_text==true:
-		print("cloud oon")
 		cloud()
 		active_label.text = "[center]" + "Nah, nah, don't be hittin' that quit button just yet. Life's a game, and you gotta stay in it, my friend. We rollin' together, so let's keep it going."
 		print_text=false
@@ -85,7 +83,10 @@ func _process(delta):
 		active_label.text = "[center]" + "Trust me, it's worth the peek. So, put that Quit idea on pause, hit up the CREDITS and let's give credit where credit's due."
 		print_text=false
 		
-	
+	elif  check_credits==true :
+		active_label.text = "[center]" + "You got the vibe, my G! Hit that New Game and let the journey unfold like a smooth West Coast breeze."
+		print_text=false
+		
 func cloud():
 	animated_sprite.play("cloud")
 	await(animated_sprite.animation_finished)
@@ -101,5 +102,9 @@ func _on_intro_ready():
 func _on_exit_ready():
 	check_intro = false
 	use_text = exit_count  
-	print(use_text, " :EC Dogg: ",exit_count)
 	print_text = true
+
+
+func _on_credits_ready():
+	$Cloud.visible = not $Cloud.visible
+	check_credits = true
