@@ -19,3 +19,7 @@ func set_level_index_first(new_index):
 	print("Level index set to:", set_level_index)
 
 var exitCount = 0
+
+func close_game():
+	get_tree().quit()
+	
