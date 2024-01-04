@@ -1185,24 +1185,137 @@ scale = Vector2(2, 2)
 [node name="Trader" parent="." instance=ExtResource("24_28s0n")]
 position = Vector2(346, 69)
 
-[node name="Schild" parent="." instance=ExtResource("25_lkex0")]
+[node name="Schilder" type="Node2D" parent="."]
+
+[node name="Schild" parent="Schilder" instance=ExtResource("25_lkex0")]
 position = Vector2(472, -10)
 
-[node name="Test" type="Label" parent="Schild"]
+[node name="Test" type="Label" parent="Schilder/Schild"]
 visible = false
-offset_left = -45.0
-offset_top = -37.0
-offset_right = -5.0
-offset_bottom = -14.0
-text = "test"
+offset_left = -36.0
+offset_top = -58.0
+offset_right = 35.0
+offset_bottom = -35.0
+text = "Beautiful"
 
-[node name="Child" type="Label" parent="Schild"]
+[node name="Test2" type="Label" parent="Schilder/Schild"]
 visible = false
-offset_left = -15.0
-offset_top = -57.0
-offset_right = 25.0
-offset_bottom = -34.0
-text = "Child"
+offset_left = -8.0
+offset_top = -75.0
+offset_right = 63.0
+offset_bottom = -52.0
+text = "Oh"
+
+[node name="Child" type="Label" parent="Schilder/Schild"]
+visible = false
+offset_left = -50.0
+offset_top = -39.0
+offset_right = -3.0
+offset_bottom = -16.0
+text = "Death"
+
+[node name="Child2" type="Label" parent="Schilder/Schild"]
+offset_left = -37.0
+offset_top = -23.0
+offset_right = 10.0
+
+[node name="Schild2" parent="Schilder" instance=ExtResource("25_lkex0")]
+position = Vector2(103, -19)
+scale = Vector2(2.84, -2.32)
+
+[node name="Orion" type="Label" parent="Schilder/Schild2"]
+visible = false
+offset_left = -25.7042
+offset_top = 39.6552
+offset_right = 18.2958
+offset_bottom = 62.6552
+scale = Vector2(1.17577, -1.58422)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Orion"
+
+[node name="Schild3" parent="Schilder" instance=ExtResource("25_lkex0")]
+position = Vector2(392, 69)
+scale = Vector2(1.48, -1.38638)
+
+[node name="Orion" type="Label" parent="Schilder/Schild3"]
+visible = false
+offset_left = -12.8378
+offset_top = 15.1474
+offset_right = 102.162
+offset_bottom = 38.1474
+scale = Vector2(0.240094, -0.562022)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Press E to Lose"
+
+[node name="Schild4" parent="Schilder" instance=ExtResource("25_lkex0")]
+position = Vector2(472, 39)
+scale = Vector2(0.880008, -0.866375)
+
+[node name="Pfeil" type="Label" parent="Schilder/Schild4"]
+visible = false
+offset_left = -13.6362
+offset_top = -3.4627
+offset_right = 101.364
+offset_bottom = 19.5373
+scale = Vector2(0.275435, -0.562022)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Nothing Important"
+
+[node name="Schild5" parent="Schilder" instance=ExtResource("25_lkex0")]
+position = Vector2(632, 39)
+scale = Vector2(0.880008, -0.866375)
+
+[node name="Pfeil" type="Label" parent="Schilder/Schild5"]
+visible = false
+offset_left = -20.4544
+offset_top = -3.4627
+offset_right = 94.5456
+offset_bottom = 19.5373
+scale = Vector2(0.376457, -0.562022)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Nothing Important"
+
+[node name="Schild6" parent="Schilder" instance=ExtResource("25_lkex0")]
+position = Vector2(552, 73)
+scale = Vector2(0.880008, -0.866375)
+
+[node name="Pfeil" type="Label" parent="Schilder/Schild6"]
+visible = false
+offset_left = -12.4999
+offset_top = 17.3135
+offset_right = 102.5
+offset_bottom = 40.3135
+scale = Vector2(0.273807, -0.546983)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Shows to Right"
+
+[node name="Schild7" parent="Schilder" instance=ExtResource("25_lkex0")]
+position = Vector2(360, -5.99998)
+scale = Vector2(0.880008, -0.866375)
+
+[node name="Pfeil" type="Label" parent="Schilder/Schild7"]
+visible = false
+offset_left = -12.4999
+offset_top = 17.3135
+offset_right = 102.5
+offset_bottom = 40.3135
+scale = Vector2(0.293955, -0.562022)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Shows to Right"
+
+[node name="Schild8" parent="Schilder" instance=ExtResource("25_lkex0")]
+position = Vector2(826, 96)
+scale = Vector2(0.960008, -1.82638)
+
+[node name="Pfeil" type="Label" parent="Schilder/Schild8"]
+visible = false
+offset_left = -17.7082
+offset_top = 15.8784
+offset_right = 97.2918
+offset_bottom = 38.8784
+scale = Vector2(0.35397, -0.254494)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Don't Fall Of"
 
 [connection signal="body_entered" from="HerionPortal" to="HerionPortal" method="_on_body_entered"]
 [connection signal="body_entered" from="FakePortale/FakePortal" to="FakePortale/FakePortal" method="_on_body_entered"]
