@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dhot0r2wpqnf3"]
+[gd_scene load_steps=27 format=3 uid="uid://dhot0r2wpqnf3"]
 
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
 [ext_resource type="Script" path="res://Scripts/Merkur.gd" id="1_omc33"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="15_8aui4"]
 [ext_resource type="PackedScene" uid="uid://bleryi6pkl4g4" path="res://Scene/schild.tscn" id="16_ma05t"]
 [ext_resource type="PackedScene" path="res://Scene/trader.tscn" id="17_pw8pq"]
+[ext_resource type="PackedScene" uid="uid://btob38i8tc80b" path="res://Scene/life_gem.tscn" id="18_31gtv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]
 texture = ExtResource("1_ku207")
@@ -577,6 +578,9 @@ autowrap_mode = 2
 
 [node name="Trader" parent="." instance=ExtResource("17_pw8pq")]
 position = Vector2(163, 1317)
+
+[node name="lifeGem" parent="." instance=ExtResource("18_31gtv")]
+position = Vector2(379, 499)
 
 [connection signal="body_entered" from="GreenPortal" to="GreenPortal" method="_on_body_entered"]
 [connection signal="body_entered" from="FakePortal" to="FakePortal" method="_on_body_entered"]
