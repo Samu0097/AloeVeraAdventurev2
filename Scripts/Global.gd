@@ -3,7 +3,7 @@ extends Node
 
 var coins = 0
 
-var life = 1
+var life = 3
 
 var positionX
 var positionY

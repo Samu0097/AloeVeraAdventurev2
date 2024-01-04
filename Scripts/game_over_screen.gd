@@ -12,6 +12,8 @@ func _process(delta):
 
 func set_score():
 	$GameOverPanel/Score.text = "Score (Coins): " + str(Global.coins) + "/300"
+	Global.coins = 0
+	Global.life = 3
 	
 
 func _on_restart_button_pressed():
