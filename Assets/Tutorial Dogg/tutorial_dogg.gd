@@ -10,6 +10,17 @@ var print_text = false
 var check_credits = false
 
 signal intro_audio2()
+signal exit_01()
+signal exit_02()
+signal exit_03()
+signal exit_04()
+signal exit_05()
+signal exit_06()
+signal exit_07()
+signal exit_08()
+signal exit_09()
+signal exit_10()
+signal credits_00()
 
 var exit_count = Global.exitCount
 # Called when the node enters the scene tree for the first time.
@@ -38,56 +49,68 @@ func _process(delta):
 	elif check_intro==false and elapsed_time >=0.2 and use_text==0 and print_text==true:
 		cloud()
 		active_label.text = "[center]" + "Nah, nah, don't be hittin' that quit button just yet. Life's a game, and you gotta stay in it, my friend. We rollin' together, so let's keep it going."
+		emit_signal("exit_01")
 		print_text=false
 		
 	elif  check_intro==false and use_text==1 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "Ayy, nephew, don't be pressin' that exit, ya feel me? Life's a wild ride, and Tutorial Dogg ain't about takin' the easy way out. "
+		emit_signal("exit_02")
 		print_text=false
 		
 	elif  check_intro==false and use_text==2 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "Roll with the rhythm, start a fresh game. We keepin' it real, so stay and keep it Doggadelic, ya dig?"
+		emit_signal("exit_03")
 		print_text=false
 		
 	elif  check_intro==false and use_text==3 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "HOLD UP! HOLD UP! You can't be walkin' out on this just yet. Tutorial Dogg's vibe is all about resilience and stayin' true to the hustle."
 		print_text=false
+		emit_signal("exit_04")
 		
 	elif  check_intro==false and use_text==4 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "Man, what you doin', tryna bounce outta here? Nah, we ain't havin' that. Press that NEW GAME button, PRONTO!"
 		print_text=false
+		emit_signal("exit_05")
 		
 	elif  check_intro==false and use_text==5 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "You can't be walkin' away from the groove, the vibe, the whole Aloe experience. "
 		print_text=false
+		emit_signal("exit_06")
 		
 	elif  check_intro==false and use_text==6 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "Let's roll, start that new game, and let the doggfather guide you through this journey. No time for exits, only entrances."
 		print_text=false
+		emit_signal("exit_07")
 		
 	elif  check_intro==false and use_text==7 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "Ya gonna leave the party when it's just getting started? Nah, nephew, don't be hittin' that. How 'bout you slide over to the CREDITS section?"
 		print_text=false
+		emit_signal("exit_08")
 		
 	elif  check_intro==false and use_text==8 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "There's a story behind every game, and the credits? They tell you who's been layin' down the beats and making it all happen."
 		print_text=false
+		emit_signal("exit_09")
 		
 	elif  check_intro==false and use_text==9 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		active_label.text = "[center]" + "Trust me, it's worth the peek. So, put that Quit idea on pause, hit up the CREDITS and let's give credit where credit's due."
 		print_text=false
+		emit_signal("exit_10")
 		
 	elif  check_credits==true :
 		active_label.text = "[center]" + "You got the vibe, my G! Hit that New Game and let the journey unfold like a smooth West Coast breeze."
 		print_text=false
+		emit_signal("credits_00")
+		check_credits=false
 		
 func cloud():
 	animated_sprite.play("cloud")
