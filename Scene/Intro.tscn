@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://tsw3ilff7h8o"]
 
 [ext_resource type="Script" path="res://Scripts/intro.gd" id="1_u4hiw"]
-[ext_resource type="PackedScene" uid="uid://danvhh2p4foyt" path="res://Scene/tutorial_dogg.tscn" id="2_b0p2k"]
+[ext_resource type="PackedScene" uid="uid://be410ygscs100" path="res://Scene/tutorial_dogg.tscn" id="2_b0p2k"]
 
 [node name="Intro" type="Node2D"]
 
@@ -48,8 +48,9 @@ anchor_mode = 0
 zoom = Vector2(3.375, 3.375)
 
 [node name="TutorialDogg" parent="." instance=ExtResource("2_b0p2k")]
-position = Vector2(16, 144)
+position = Vector2(136, 120)
 
+[connection signal="ready" from="Control" to="TutorialDogg" method="_on_control_ready"]
 [connection signal="pressed" from="Control/New Game" to="Control" method="_on_new_game_pressed"]
 [connection signal="pressed" from="Control/Exit" to="Control" method="_on_exit_pressed"]
 [connection signal="pressed" from="Control/Credits" to="Control" method="_on_credits_pressed"]
