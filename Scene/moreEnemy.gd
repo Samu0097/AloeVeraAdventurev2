@@ -1,4 +1,4 @@
-class_name Enemy
+class_name MoreEnemy
 extends CharacterBody2D
 
 var bat_speed = 75
@@ -19,9 +19,6 @@ func _on_detection_area_body_entered(body):
 
 
 
-func _on_area_2d_body_entered(body):	
-	if body is Player and Global.life == 0:
+func _on_area_2d_body_entered(body):
+	if body is Player:
 		get_tree().change_scene_to_file("res://Scene/game_over_screen.tscn")
-	else:
-		if body.has_method("ResetPlayer"):
-			body.ResetPlayer()

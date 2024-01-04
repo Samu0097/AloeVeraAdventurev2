@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dkl8cpei68bs1"]
 
-[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_lcyc1"]
+[ext_resource type="Script" path="res://Scene/moreEnemy.gd" id="1_jc0lx"]
 [ext_resource type="Texture2D" uid="uid://dp505l8ekxbut" path="res://Assets/AloeChar/terminator-dead/idle/0.png" id="2_diwv4"]
 [ext_resource type="Texture2D" uid="uid://bov2y4kjy6h3s" path="res://Assets/AloeChar/terminator-dead/idle/1.png" id="3_fq6hx"]
 [ext_resource type="Texture2D" uid="uid://cpgnw6p823oob" path="res://Assets/Fireball/Fireball01.png" id="4_es3ma"]
@@ -42,7 +42,7 @@ height = 5458.23
 radius = 6.0
 
 [node name="MoreEnemy" type="CharacterBody2D"]
-script = ExtResource("1_lcyc1")
+script = ExtResource("1_jc0lx")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -51,7 +51,7 @@ scale = Vector2(1, 0.842)
 sprite_frames = SubResource("SpriteFrames_wxktc")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.134031
+frame_progress = 0.0654474
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kuob0")
