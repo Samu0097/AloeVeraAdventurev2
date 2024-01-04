@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cccaokb7wklss"]
+[gd_scene load_steps=16 format=3 uid="uid://cccaokb7wklss"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_uxijk"]
 [ext_resource type="Texture2D" uid="uid://dcmuqaltgglrw" path="res://Assets/AloeChar/normal/jump/2.png" id="2_52yuq"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cntrpy3wwajjd" path="res://Assets/AloeChar/normal/walk/0.png" id="9_ol0wt"]
 [ext_resource type="Texture2D" uid="uid://cxjq8kww2bcvw" path="res://Assets/AloeChar/normal/walk/1.png" id="10_duoqd"]
 [ext_resource type="Texture2D" uid="uid://dgu2j6gt44hw0" path="res://Assets/AloeChar/normal/walk/2.png" id="11_l6xew"]
+[ext_resource type="Texture2D" uid="uid://c027sseiua267" path="res://Assets/Assets/Coins/01.png" id="12_jwtwj"]
+[ext_resource type="Texture2D" uid="uid://cahu52awaiusn" path="res://Assets/Assets/heart pixel art/heart pixel art 16x16.png" id="13_njsyn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_22831"]
 radius = 5.0
@@ -92,6 +94,33 @@ frame_progress = 0.632096
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -20)
 zoom = Vector2(3, 3)
+
+[node name="Coins" type="Node2D" parent="Camera2D"]
+
+[node name="CoinsScore" type="Label" parent="Camera2D/Coins"]
+offset_left = -153.0
+offset_top = -101.0
+offset_right = -113.0
+offset_bottom = -78.0
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Coins"]
+position = Vector2(-168, -90)
+scale = Vector2(1.45565, 1.40388)
+texture = ExtResource("12_jwtwj")
+
+[node name="Life" type="Node2D" parent="Camera2D"]
+
+[node name="LifeScore" type="Label" parent="Camera2D/Life"]
+offset_left = -153.0
+offset_top = -77.0
+offset_right = -113.0
+offset_bottom = -54.0
+text = "1"
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/Life"]
+position = Vector2(-167, -65)
+texture = ExtResource("13_njsyn")
 
 [node name="JumpTimer" type="Timer" parent="."]
 wait_time = 0.1

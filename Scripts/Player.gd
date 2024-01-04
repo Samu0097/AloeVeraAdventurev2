@@ -86,10 +86,12 @@ func set_sprite_set(set_level_index: int):
 
 func LoseLife():
 	Global.life = Global.life -1
+	get_node("Camera2D/Life/LifeScore").text = str(Global.life)
 	
 func ResetPlayer():
 	position = Vector2(Global.positionX, Global.positionY)
 	Global.life -= 1
+	get_node("Camera2D/Life/LifeScore").text = str(Global.life)
 	
 func Portal():
 	position = Vector2(Global.positionX, Global.positionY)
