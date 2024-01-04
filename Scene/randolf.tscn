@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgsii6kq4frdj"]
+
+[ext_resource type="Script" path="res://randolf.gd" id="1_6pajt"]
+[ext_resource type="Texture2D" uid="uid://g5cgalr3ql1q" path="res://Assets/Player/sprite_29.png" id="2_bamgy"]
+[ext_resource type="Texture2D" uid="uid://bw53db6iat8sw" path="res://Assets/Player/sprite_30.png" id="3_5a2hh"]
+[ext_resource type="Texture2D" uid="uid://c027sseiua267" path="res://Assets/Assets/Coins/01.png" id="4_241fq"]
+[ext_resource type="Texture2D" uid="uid://cahu52awaiusn" path="res://Assets/Assets/heart pixel art/heart pixel art 16x16.png" id="5_o4khc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48rn8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bamgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5a2hh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rffsw"]
+radius = 19.9999
+height = 125.892
+
+[node name="randolf" type="Area2D"]
+script = ExtResource("1_6pajt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+sprite_frames = SubResource("SpriteFrames_48rn8")
+frame_progress = 0.430156
+
+[node name="Training" type="Node2D" parent="."]
+visible = false
+position = Vector2(-4, -8)
+scale = Vector2(0.5, 0.5)
+
+[node name="Trade" type="Label" parent="Training"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 32.0
+offset_bottom = -11.0
+text = "-->"
+
+[node name="coin" type="Node2D" parent="Training"]
+position = Vector2(4, -2)
+
+[node name="Coin2" type="Sprite2D" parent="Training/coin"]
+position = Vector2(-25, -20)
+scale = Vector2(1.45565, 1.40388)
+texture = ExtResource("4_241fq")
+
+[node name="Coin" type="Label" parent="Training/coin"]
+offset_left = -52.0
+offset_top = -32.0
+offset_right = -12.0
+offset_bottom = -9.0
+text = "50"
+
+[node name="life" type="Node2D" parent="Training"]
+position = Vector2(-4, -2)
+
+[node name="Life" type="Label" parent="Training/life"]
+offset_left = 17.0
+offset_top = -33.0
+offset_right = 57.0
+offset_bottom = -10.0
+text = "1-10"
+
+[node name="Life2" type="Sprite2D" parent="Training/life"]
+position = Vector2(60, -22)
+texture = ExtResource("5_o4khc")
+
+[node name="Gain" type="Label" parent="Training"]
+offset_left = -58.0
+offset_top = -54.0
+offset_right = 69.0
+offset_bottom = -31.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "No Pain No Gain"
+
+[node name="Intro" type="Node2D" parent="."]
+
+[node name="Randolf der Trainierte" type="Label" parent="Intro"]
+offset_left = -42.0
+offset_top = -29.0
+offset_right = 129.0
+offset_bottom = -6.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Randolf der Trainierte"
+
+[node name="Leg Day" type="Label" parent="Intro"]
+offset_left = -24.0
+offset_top = -19.0
+offset_right = 146.0
+offset_bottom = 4.0
+scale = Vector2(0.3, 0.3)
+text = "Never Missed Leg Day"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.31323e-10, -9)
+rotation = -1.56726
+shape = SubResource("CapsuleShape2D_rffsw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

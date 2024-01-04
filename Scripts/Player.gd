@@ -12,6 +12,10 @@ var animated_sprite : AnimatedSprite2D
 
 @onready var level_sprite_sets: Array = [] #Alle SpriteSets
 #var current_level : int = 0  # Der aktuelle Level-Index
+signal killed
+
+
+
  
 
 func _ready():
@@ -99,3 +103,11 @@ func StatusUpdate():
 	
 func Portal():
 	position = Vector2(Global.positionX, Global.positionY)
+
+func _die():
+	killed.emit()
+	
+
+func _on_player_killed():
+	await get_tree().create_timer(2).timeout
+	get_tree().change_scene_to_file("res://Scene/game_over_screen.tscn")
