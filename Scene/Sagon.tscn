@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cq37m60h21qk8"]
+[gd_scene load_steps=32 format=3 uid="uid://cq37m60h21qk8"]
 
 [ext_resource type="Texture2D" uid="uid://bht0a0t254o3o" path="res://Assets/Background/P_Background.png" id="1_b3qsk"]
 [ext_resource type="Script" path="res://Scripts/RunPortal.gd" id="1_jyk84"]

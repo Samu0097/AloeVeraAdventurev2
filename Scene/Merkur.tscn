@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dhot0r2wpqnf3"]
+[gd_scene load_steps=26 format=3 uid="uid://dhot0r2wpqnf3"]
 
 [ext_resource type="Texture2D" uid="uid://d26lwc6dhducy" path="res://Assets/Seasonal Tilesets/4 - Winter World/Terrain (16 x 16).png" id="1_ku207"]
 [ext_resource type="Script" path="res://Scripts/Merkur.gd" id="1_omc33"]
@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://Scripts/FakePortal.gd" id="14_8hdqi"]
 [ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="14_8li40"]
 [ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="15_8aui4"]
-[ext_resource type="PackedScene" uid="uid://bleryi6pkl4g4" path="res://Scene/schild.tscn" id="16_ma05t"]
+[ext_resource type="PackedScene" path="res://Scene/schild.tscn" id="16_ma05t"]
 [ext_resource type="PackedScene" path="res://Scene/trader.tscn" id="17_pw8pq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vdscv"]

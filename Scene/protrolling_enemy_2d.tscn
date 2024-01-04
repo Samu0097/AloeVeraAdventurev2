@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=3 uid="uid://tfhxehqf6yju"]
+
+[ext_resource type="Texture2D" uid="uid://mqxd2h2yx15a" path="res://Assets/AloeChar/terminator-dead/walk/0.png" id="1_7c8pk"]
+[ext_resource type="Texture2D" uid="uid://c5lkmaquar6xy" path="res://Assets/AloeChar/terminator-dead/walk/1.png" id="2_jokhn"]
+[ext_resource type="Texture2D" uid="uid://ce2psq2dy1uvo" path="res://Assets/AloeChar/terminator-dead/walk/2.png" id="3_e7y75"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6rmkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7c8pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jokhn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e7y75")
+}],
+"loop": true,
+"name": &"run!",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_mn134"]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("0:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_mt4jp"]
+resource_name = "run"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(42, -1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("0:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.03, 4.98),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_50l0v"]
+_data = {
+"RESET": SubResource("Animation_mn134"),
+"run": SubResource("Animation_mt4jp")
+}
+
+[node name="protrolling_enemy2D" type="Node2D"]
+
+[node name="0" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6rmkm")
+animation = &"run!"
+autoplay = "run!"
+frame_progress = 0.940245
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_50l0v")
+}
+autoplay = "run"
