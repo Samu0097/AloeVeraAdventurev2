@@ -23,8 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://cyf2q7147jkdq" path="res://Scene/moving_plattform.tscn" id="18_nflaq"]
 [ext_resource type="PackedScene" uid="uid://cq7h3nh8oy2ic" path="res://Scene/checkpoint.tscn" id="19_fuxvq"]
 [ext_resource type="Texture2D" uid="uid://cu0pwi6l5c88d" path="res://Assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="23_tk5ej"]
-[ext_resource type="PackedScene" path="res://Scene/trader.tscn" id="24_28s0n"]
-[ext_resource type="PackedScene" path="res://Scene/schild.tscn" id="25_lkex0"]
+[ext_resource type="PackedScene" uid="uid://b1evdviu023od" path="res://Scene/trader.tscn" id="24_28s0n"]
+[ext_resource type="PackedScene" uid="uid://bleryi6pkl4g4" path="res://Scene/schild.tscn" id="25_lkex0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0huiv"]
 texture = ExtResource("1_om7qi")
