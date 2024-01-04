@@ -51,7 +51,7 @@ scale = Vector2(1, 0.842)
 sprite_frames = SubResource("SpriteFrames_wxktc")
 animation = &"new_animation"
 autoplay = "new_animation"
-frame_progress = 0.111852
+frame_progress = 0.134031
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kuob0")

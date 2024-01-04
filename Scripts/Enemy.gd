@@ -21,7 +21,7 @@ func _on_detection_area_body_entered(body):
 
 func _on_area_2d_body_entered(body):
 	if body is Player:
-		body._die()
+		get_tree().change_scene_to_file("res://Scene/game_over_screen.tscn")
 	
 	#if body is Player and Global.life == 0:
 		#Death Menu anzeigen lassen
