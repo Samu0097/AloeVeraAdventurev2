@@ -96,6 +96,7 @@ position = Vector2(0, -20)
 zoom = Vector2(3, 3)
 
 [node name="Coins" type="Node2D" parent="Camera2D"]
+z_index = 1
 
 [node name="CoinsScore" type="Label" parent="Camera2D/Coins"]
 offset_left = -153.0
@@ -110,6 +111,7 @@ scale = Vector2(1.45565, 1.40388)
 texture = ExtResource("12_jwtwj")
 
 [node name="Life" type="Node2D" parent="Camera2D"]
+z_index = 1
 
 [node name="LifeScore" type="Label" parent="Camera2D/Life"]
 offset_left = -153.0
