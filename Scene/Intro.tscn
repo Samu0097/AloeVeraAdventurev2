@@ -48,7 +48,8 @@ anchor_mode = 0
 zoom = Vector2(3.375, 3.375)
 
 [node name="TutorialDogg" parent="." instance=ExtResource("2_b0p2k")]
-position = Vector2(136, 120)
+position = Vector2(144, 112)
+scale = Vector2(1.5, 1.5)
 
 [connection signal="ready" from="Control" to="TutorialDogg" method="_on_control_ready"]
 [connection signal="pressed" from="Control/New Game" to="Control" method="_on_new_game_pressed"]
