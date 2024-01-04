@@ -998,6 +998,45 @@ frame_progress = 0.633488
 [node name="Coin" parent="Coin" instance=ExtResource("7_mpdmi")]
 position = Vector2(391, -30)
 
+[node name="Coin22" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(600, 59)
+
+[node name="Coin23" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(664, 80)
+
+[node name="Coin24" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(764, 59)
+
+[node name="Coin25" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(946, -29)
+
+[node name="Coin26" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(1019, -86)
+
+[node name="Coin27" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(1127, 21)
+
+[node name="Coin28" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(1195, -61)
+
+[node name="Coin29" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(1195, -61)
+
+[node name="Coin30" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(676, -235)
+
+[node name="Coin31" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(-14, -284)
+
+[node name="Coin32" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(220, -23)
+
+[node name="Coin33" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(255, -23)
+
+[node name="Coin34" parent="Coin" instance=ExtResource("7_mpdmi")]
+position = Vector2(239, -34)
+
 [node name="Coin2" parent="Coin" instance=ExtResource("7_mpdmi")]
 position = Vector2(744, -10)
 
