@@ -5,7 +5,7 @@
 
 [node name="Intro" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Intro" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u4hiw")
 
-[node name="New Game" type="Button" parent="Control"]
+[node name="New Game" type="Button" parent="Intro"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
@@ -26,7 +26,7 @@ action_mode = 0
 text = "New Game"
 icon_alignment = 1
 
-[node name="Exit" type="Button" parent="Control"]
+[node name="Exit" type="Button" parent="Intro"]
 layout_mode = 0
 offset_left = 208.0
 offset_top = 40.0
@@ -35,7 +35,7 @@ offset_bottom = 88.0
 text = "Exit
 "
 
-[node name="Credits" type="Button" parent="Control"]
+[node name="Credits" type="Button" parent="Intro"]
 layout_mode = 0
 offset_left = 144.0
 offset_top = 128.0
@@ -48,8 +48,9 @@ anchor_mode = 0
 zoom = Vector2(3.375, 3.375)
 
 [node name="TutorialDogg" parent="." instance=ExtResource("2_b0p2k")]
-position = Vector2(16, 144)
+position = Vector2(166, 115)
 
-[connection signal="pressed" from="Control/New Game" to="Control" method="_on_new_game_pressed"]
-[connection signal="pressed" from="Control/Exit" to="Control" method="_on_exit_pressed"]
-[connection signal="pressed" from="Control/Credits" to="Control" method="_on_credits_pressed"]
+[connection signal="ready" from="Intro" to="TutorialDogg" method="_on_intro_ready"]
+[connection signal="pressed" from="Intro/New Game" to="Intro" method="_on_new_game_pressed"]
+[connection signal="pressed" from="Intro/Exit" to="Intro" method="_on_exit_pressed"]
+[connection signal="pressed" from="Intro/Credits" to="Intro" method="_on_credits_pressed"]

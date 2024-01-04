@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvrqrxe2vwcs1"]
 
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_ailnr"]
+[ext_resource type="Script" path="res://Scripts/exit.gd" id="1_ailnr"]
 [ext_resource type="PackedScene" uid="uid://be410ygscs100" path="res://Scene/tutorial_dogg.tscn" id="2_fwm5d"]
 
 [node name="Exit" type="Node2D"]
