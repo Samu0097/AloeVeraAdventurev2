@@ -26,18 +26,17 @@ func _process(delta):
 	if check_intro==true and elapsed_time >= 0.99  and use_text==0 and print_text==true:
 		cloud()
 		use_text +=1
-		print(active_label.text)
 		
-	elif check_intro==true and elapsed_time >= 18.99  and use_text==1 and print_text==true:
+	elif check_intro==true and elapsed_time >= 12.99  and use_text==1 and print_text==true:
 		$Cloud.visible = not $Cloud.visible
 		cloud()
 		active_label.text = "[center]" + "Ayy, it's time to roll the dice and start a new game, my friend. Let's see what kind of moves you're gonna make. Game on!"
+		emit_signal("intro_audio2")
 		use_text +=1
 		print(active_label.text)
 		
 	elif check_intro==false and elapsed_time >=0.2 and use_text==0 and print_text==true:
 		cloud()
-		emit_signal("intro_audio2")
 		active_label.text = "[center]" + "Nah, nah, don't be hittin' that quit button just yet. Life's a game, and you gotta stay in it, my friend. We rollin' together, so let's keep it going."
 		print_text=false
 		
