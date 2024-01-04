@@ -6,7 +6,7 @@ var bodyPlayer = null
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("Interaction") and Trade:
-		if Global.coins < 9:
+		if Global.coins > 9:
 			Global.coins -= 10
 			Global.life += 1
 			bodyPlayer.StatusUpdate()
