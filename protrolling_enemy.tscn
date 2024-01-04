@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://d34m0kn1puy77"]
+
+[ext_resource type="Script" path="res://PatrollingEnemy.gd" id="1_fdk0g"]
+[ext_resource type="Texture2D" uid="uid://dp505l8ekxbut" path="res://Assets/AloeChar/terminator-dead/idle/0.png" id="2_lorkd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q462m"]
+radius = 8.0
+height = 18.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_17ra2"]
+radius = 8.0
+height = 18.0
+
+[sub_resource type="Animation" id="Animation_mt4jp"]
+resource_name = "run"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_50l0v"]
+_data = {
+"run": SubResource("Animation_mt4jp")
+}
+
+[node name="PatrollingEnemy" type="CharacterBody2D"]
+script = ExtResource("1_fdk0g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lorkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_q462m")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_17ra2")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(8, 0)
+target_position = Vector2(2.08165e-12, 15)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_50l0v")
+}
