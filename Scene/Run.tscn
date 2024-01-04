@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://djrd26ymv67k5"]
+[gd_scene load_steps=22 format=3 uid="uid://djrd26ymv67k5"]
 
 [ext_resource type="Script" path="res://Scripts/Run.gd" id="1_2xfyn"]
 [ext_resource type="Texture2D" uid="uid://oac531t2j3af" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Bubbling_Oil_frames (16 x 32).png" id="1_o5l2v"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="2_6ascl"]
+[ext_resource type="Texture2D" uid="uid://7vyf8svwyuwu" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="2_px8fa"]
 [ext_resource type="PackedScene" uid="uid://dkl8cpei68bs1" path="res://Scene/moreEnemy.tscn" id="4_l8yfn"]
-[ext_resource type="PackedScene" uid="uid://lyacnc1sycxt" path="res://Scene/schild.tscn" id="5_6r1cf"]
+[ext_resource type="PackedScene" uid="uid://bleryi6pkl4g4" path="res://Scene/schild.tscn" id="5_6r1cf"]
 [ext_resource type="Texture2D" uid="uid://b1o3wrhw4bpmv" path="res://Assets/Portals/winter/0.png" id="6_p4gfn"]
 [ext_resource type="Script" path="res://Scene/Area2D.gd" id="6_txqck"]
 [ext_resource type="Texture2D" uid="uid://cx575olf0jsvb" path="res://Assets/Portals/winter/1.png" id="7_26uew"]
@@ -14,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bov2y4kjy6h3s" path="res://Assets/AloeChar/terminator-dead/idle/1.png" id="11_cea6t"]
 [ext_resource type="Texture2D" uid="uid://cpgnw6p823oob" path="res://Assets/Fireball/Fireball01.png" id="12_55gt5"]
 [ext_resource type="Texture2D" uid="uid://u7u3bdir5hvs" path="res://Assets/Fireball/Fireball02.png" id="13_v2jc3"]
+[ext_resource type="PackedScene" uid="uid://dbx2s82sa42qt" path="res://Scene/coin.tscn" id="15_1tmq5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48xt8"]
 texture = ExtResource("1_o5l2v")
@@ -54,28 +56,6 @@ texture = ExtResource("1_o5l2v")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_48xt8")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bbylj"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7pyx8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_p4gfn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_26uew")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_2aec7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_xt5s1")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_e71px"]
 animations = [{
 "frames": [{
@@ -101,15 +81,43 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bbylj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7pyx8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_p4gfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_26uew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2aec7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xt5s1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Run" type="Node2D"]
 script = ExtResource("1_2xfyn")
+
+[node name="WaterFrames(16X32)" type="Sprite2D" parent="."]
+position = Vector2(9391, -415.5)
+scale = Vector2(620.438, 36.8438)
+texture = ExtResource("2_px8fa")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 67.0
 offset_top = -48.0
 offset_right = 151.0
 offset_bottom = -25.0
-text = "Better Run"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Better Run "
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -266,24 +274,232 @@ position = Vector2(2562, -851)
 [node name="MoreEnemy54" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
 position = Vector2(2961, -808)
 
-[node name="Schild" parent="." instance=ExtResource("5_6r1cf")]
+[node name="Label2" type="Label" parent="."]
+offset_left = 161.0
+offset_top = -70.0
+offset_right = 377.0
+offset_bottom = -21.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Life doesn`t matter anyway
+get some money!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="coin" type="Node2D" parent="."]
+
+[node name="Coin43" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3035, -26)
+
+[node name="Coin44" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3159, -28)
+
+[node name="Coin45" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3368, -23)
+
+[node name="Coin46" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3513, -55)
+
+[node name="Coin47" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3640, -71)
+
+[node name="Coin48" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3721, -18)
+
+[node name="Coin49" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3770, -17)
+
+[node name="Coin50" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3813, -16)
+
+[node name="Coin51" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3856, -16)
+
+[node name="Coin52" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3895, -16)
+
+[node name="Coin53" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3932, -14)
+
+[node name="Coin54" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(3979, -17)
+
+[node name="Coin" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(215, -15)
+
+[node name="Coin2" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(280, -15)
+
+[node name="Coin3" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(354, -45)
+
+[node name="Coin4" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(409, -15)
+
+[node name="Coin5" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(520, -93)
+
+[node name="Coin6" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(567, -15)
+
+[node name="Coin7" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(650, -43)
+
+[node name="Coin8" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(768, -15)
+
+[node name="Coin9" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(832, -55)
+
+[node name="Coin10" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(888, -15)
+
+[node name="Coin11" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(990, -59)
+
+[node name="Coin12" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1052, -15)
+
+[node name="Coin13" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1113, -52)
+
+[node name="Coin14" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1167, -15)
+
+[node name="Coin15" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1243, -107)
+
+[node name="Coin16" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1291, -15)
+
+[node name="Coin17" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1344, -15)
+
+[node name="Coin18" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1434, -23)
+
+[node name="Coin19" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1465, -69)
+
+[node name="Coin20" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1498, -39)
+
+[node name="Coin21" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1530, -15)
+
+[node name="Coin22" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1572, -43)
+
+[node name="Coin23" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1613, -79)
+
+[node name="Coin24" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1643, -45)
+
+[node name="Coin25" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1674, -15)
+
+[node name="Coin26" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1749, -15)
+
+[node name="Coin27" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1867, -41)
+
+[node name="Coin28" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1864, -74)
+
+[node name="Coin29" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1940, -15)
+
+[node name="Coin30" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(1982, -15)
+
+[node name="Coin31" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2022, -15)
+
+[node name="Coin32" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2057, -15)
+
+[node name="Coin33" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2248, -122)
+
+[node name="Coin34" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2441, -156)
+
+[node name="Coin35" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2600, -23)
+
+[node name="Coin36" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2712, -124)
+
+[node name="Coin37" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2855, -102)
+
+[node name="Coin38" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2489, -59)
+
+[node name="Coin39" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2716, -36)
+
+[node name="Coin40" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2332, -15)
+
+[node name="Coin41" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2806, -15)
+
+[node name="Coin42" parent="coin" instance=ExtResource("15_1tmq5")]
+position = Vector2(2898, -15)
+
+[node name="schilder" type="Node2D" parent="."]
+
+[node name="Schild3" parent="schilder" instance=ExtResource("5_6r1cf")]
+position = Vector2(9692, -28)
+scale = Vector2(16.6401, 10.92)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="schilder/Schild3"]
+visible = false
+position = Vector2(10.2763, -2.1978)
+rotation = 1.5708
+scale = Vector2(1, 0.842)
+sprite_frames = SubResource("SpriteFrames_e71px")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="schilder/Schild3"]
+visible = false
+position = Vector2(2.70425, -6.95971)
+rotation = 1.5708
+scale = Vector2(1, 0.842)
+sprite_frames = SubResource("SpriteFrames_e71px")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="schilder/Schild3"]
+visible = false
+position = Vector2(-6.00963, -5.40293)
+rotation = 1.5708
+scale = Vector2(1, 0.842)
+sprite_frames = SubResource("SpriteFrames_e71px")
+animation = &"new_animation"
+autoplay = "new_animation"
+
+[node name="Schild" parent="schilder" instance=ExtResource("5_6r1cf")]
 position = Vector2(10061, -24)
 scale = Vector2(16.6401, 10.92)
 
-[node name="Area2D" type="Area2D" parent="Schild"]
+[node name="Area2D" type="Area2D" parent="schilder/Schild"]
 visible = false
 position = Vector2(8.95427, -0.641026)
 scale = Vector2(0.0930397, 0.331702)
 script = ExtResource("6_txqck")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Schild/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="schilder/Schild/Area2D"]
 shape = SubResource("CapsuleShape2D_bbylj")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Schild/Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="schilder/Schild/Area2D"]
 sprite_frames = SubResource("SpriteFrames_7pyx8")
 autoplay = "default"
 
-[node name="Text" type="Label" parent="Schild"]
+[node name="Text" type="Label" parent="schilder/Schild"]
 visible = false
 offset_left = 1.14182
 offset_top = -4.85348
@@ -293,7 +509,7 @@ rotation = 0.308546
 scale = Vector2(0.0457723, 0.115027)
 text = "Save Your Coins"
 
-[node name="Text2" type="Label" parent="Schild"]
+[node name="Text2" type="Label" parent="schilder/Schild"]
 visible = false
 offset_left = -7.93264
 offset_top = -2.83883
@@ -303,11 +519,11 @@ rotation = -0.298316
 scale = Vector2(0.042708, 0.108254)
 text = "Portal Back To Home"
 
-[node name="Schild2" parent="." instance=ExtResource("5_6r1cf")]
+[node name="Schild2" parent="schilder" instance=ExtResource("5_6r1cf")]
 position = Vector2(9629, -32)
 scale = Vector2(16.6401, 10.92)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Schild2"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="schilder/Schild2"]
 visible = false
 position = Vector2(-14.8437, -1.92308)
 rotation = 1.5708
@@ -316,7 +532,7 @@ sprite_frames = SubResource("SpriteFrames_e71px")
 animation = &"new_animation"
 autoplay = "new_animation"
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Schild2"]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="schilder/Schild2"]
 visible = false
 position = Vector2(-9.31484, -12.0879)
 rotation = 1.5708
@@ -325,35 +541,44 @@ sprite_frames = SubResource("SpriteFrames_e71px")
 animation = &"new_animation"
 autoplay = "new_animation"
 
-[node name="Schild3" parent="." instance=ExtResource("5_6r1cf")]
-position = Vector2(9692, -28)
+[node name="Schild4" parent="schilder" instance=ExtResource("5_6r1cf")]
+position = Vector2(1376, -54)
 scale = Vector2(16.6401, 10.92)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Schild3"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="schilder/Schild4"]
 visible = false
-position = Vector2(10.2763, -2.1978)
+position = Vector2(-6.43025, 0.915751)
 rotation = 1.5708
 scale = Vector2(1, 0.842)
 sprite_frames = SubResource("SpriteFrames_e71px")
 animation = &"new_animation"
 autoplay = "new_animation"
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Schild3"]
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="schilder/Schild4"]
 visible = false
-position = Vector2(2.70425, -6.95971)
+position = Vector2(8.29322, 1.00733)
 rotation = 1.5708
 scale = Vector2(1, 0.842)
 sprite_frames = SubResource("SpriteFrames_e71px")
 animation = &"new_animation"
 autoplay = "new_animation"
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Schild3"]
-visible = false
-position = Vector2(-6.00963, -5.40293)
-rotation = 1.5708
-scale = Vector2(1, 0.842)
-sprite_frames = SubResource("SpriteFrames_e71px")
-animation = &"new_animation"
-autoplay = "new_animation"
+[node name="Label3" type="Label" parent="."]
+offset_left = -68.0
+offset_top = -129.0
+offset_right = 21.0
+offset_bottom = -106.0
+scale = Vector2(3, 3)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Bonuslevel!"
 
-[connection signal="body_entered" from="Schild/Area2D" to="Schild/Area2D" method="_on_body_entered"]
+[node name="Coin" parent="." instance=ExtResource("15_1tmq5")]
+position = Vector2(4015, -17)
+
+[node name="Coin2" parent="." instance=ExtResource("15_1tmq5")]
+position = Vector2(4048, -18)
+
+[node name="Coin3" parent="." instance=ExtResource("15_1tmq5")]
+position = Vector2(4079, -19)
+
+[connection signal="body_entered" from="schilder/Schild/Area2D" to="schilder/Schild/Area2D" method="_on_body_entered"]
