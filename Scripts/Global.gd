@@ -1,7 +1,7 @@
 extends Node 
 
 
-var coins = 0
+var coins = 15
 
 var life = 1
 
