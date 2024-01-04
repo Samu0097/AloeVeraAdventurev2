@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dt0xs7vyxjrxh"
+path="res://.godot/imported/03_ayyNE.mp3-e3a2e928e631332d4f5b858a71fbb335.mp3str"
+
+[deps]
+
+source_file="res://Assets/Tutorial Dogg/Sound/03_ayyNE.mp3"
+dest_files=["res://.godot/imported/03_ayyNE.mp3-e3a2e928e631332d4f5b858a71fbb335.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

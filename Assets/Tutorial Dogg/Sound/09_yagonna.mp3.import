@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://e0hxaesp1ul0"
+path="res://.godot/imported/09_yagonna.mp3-edba4b49a9d4e95492fdf32eef2d6b36.mp3str"
+
+[deps]
+
+source_file="res://Assets/Tutorial Dogg/Sound/09_yagonna.mp3"
+dest_files=["res://.godot/imported/09_yagonna.mp3-edba4b49a9d4e95492fdf32eef2d6b36.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

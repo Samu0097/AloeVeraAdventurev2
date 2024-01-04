@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcaxkcpwqpkyd"]
+[gd_scene load_steps=3 format=3 uid="uid://dcaxkcpwqpkyd"]
 
 [ext_resource type="Script" path="res://Scripts/exit.gd" id="1_e20da"]
+[ext_resource type="PackedScene" uid="uid://be410ygscs100" path="res://Scene/tutorial_dogg.tscn" id="2_xpcae"]
 
 [node name="Credits" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Credits" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -15,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e20da")
 
-[node name="New Game" type="Button" parent="Control"]
+[node name="New Game" type="Button" parent="Credits"]
 layout_mode = 0
 offset_left = 64.0
 offset_top = 64.0
@@ -25,7 +26,7 @@ action_mode = 0
 text = "New Game"
 icon_alignment = 1
 
-[node name="New Game2" type="Button" parent="Control"]
+[node name="New Game2" type="Button" parent="Credits"]
 layout_mode = 0
 offset_left = 208.0
 offset_top = 40.0
@@ -35,7 +36,7 @@ action_mode = 0
 text = "New Game"
 icon_alignment = 1
 
-[node name="New Game3" type="Button" parent="Control"]
+[node name="New Game3" type="Button" parent="Credits"]
 layout_mode = 0
 offset_left = 144.0
 offset_top = 128.0
@@ -49,6 +50,10 @@ icon_alignment = 1
 anchor_mode = 0
 zoom = Vector2(3.375, 3.375)
 
-[connection signal="pressed" from="Control/New Game" to="Control" method="_on_new_game_pressed"]
-[connection signal="pressed" from="Control/New Game2" to="Control" method="_on_new_game_pressed"]
-[connection signal="pressed" from="Control/New Game3" to="Control" method="_on_new_game_pressed"]
+[node name="TutorialDogg" parent="." instance=ExtResource("2_xpcae")]
+position = Vector2(166, 115)
+
+[connection signal="ready" from="Credits" to="TutorialDogg" method="_on_credits_ready"]
+[connection signal="pressed" from="Credits/New Game" to="Credits" method="_on_new_game_pressed"]
+[connection signal="pressed" from="Credits/New Game2" to="Credits" method="_on_new_game_pressed"]
+[connection signal="pressed" from="Credits/New Game3" to="Credits" method="_on_new_game_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bin2spi7vkgkh"
+path="res://.godot/imported/06_pronto.mp3-5246a9a0103360ba8027217a3850d4f3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Tutorial Dogg/Sound/06_pronto.mp3"
+dest_files=["res://.godot/imported/06_pronto.mp3-5246a9a0103360ba8027217a3850d4f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

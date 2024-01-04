@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dj4f4s7t1wy6n"
+path="res://.godot/imported/12_credits.mp3-86657c56cefdaa9da4f7ea9aec300e8b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Tutorial Dogg/Sound/12_credits.mp3"
+dest_files=["res://.godot/imported/12_credits.mp3-86657c56cefdaa9da4f7ea9aec300e8b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1ky1alalc3l0"
+path="res://.godot/imported/04_roll.mp3-f9657dde0fe2665e6fe995b8f6932ac6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Tutorial Dogg/Sound/04_roll.mp3"
+dest_files=["res://.godot/imported/04_roll.mp3-f9657dde0fe2665e6fe995b8f6932ac6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
