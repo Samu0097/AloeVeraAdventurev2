@@ -1,8 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://de5cunaic7w2c"]
+[gd_scene load_steps=33 format=3 uid="uid://de5cunaic7w2c"]
 
 [ext_resource type="Texture2D" uid="uid://cnee2aeec6la0" path="res://Assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_om7qi"]
 [ext_resource type="Script" path="res://Scripts/orion.gd" id="1_tcq53"]
 [ext_resource type="Texture2D" uid="uid://b26lsqnla6ker" path="res://Assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_0citb"]
+[ext_resource type="Texture2D" uid="uid://d12vfy3q55u8a" path="res://Assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="2_eospu"]
+[ext_resource type="Texture2D" uid="uid://blc7h8gljanfx" path="res://Assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="3_0kbwr"]
 [ext_resource type="Texture2D" uid="uid://b27gdijwhd32a" path="res://Assets/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" id="3_q4vfl"]
 [ext_resource type="Texture2D" uid="uid://ctlsxjyxt2s6u" path="res://Assets/Assets/sheet.png" id="4_ql85v"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="5_8c0h6"]
@@ -20,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://btob38i8tc80b" path="res://Scene/life_gem.tscn" id="17_6e1qa"]
 [ext_resource type="PackedScene" uid="uid://cyf2q7147jkdq" path="res://Scene/moving_plattform.tscn" id="18_nflaq"]
 [ext_resource type="PackedScene" uid="uid://cq7h3nh8oy2ic" path="res://Scene/checkpoint.tscn" id="19_fuxvq"]
+[ext_resource type="Texture2D" uid="uid://cu0pwi6l5c88d" path="res://Assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="23_tk5ej"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0huiv"]
 texture = ExtResource("1_om7qi")
@@ -832,6 +835,73 @@ height = 18.0
 [node name="Orion" type="Node2D"]
 script = ExtResource("1_tcq53")
 
+[node name="Background" type="Node2D" parent="."]
+
+[node name="5-SkyColor" type="Sprite2D" parent="Background"]
+position = Vector2(476, 38)
+scale = Vector2(6.20833, 4.58173)
+texture = ExtResource("2_eospu")
+
+[node name="3-CloudCover1" type="Sprite2D" parent="Background"]
+position = Vector2(480, -51)
+scale = Vector2(6.23611, 3.72115)
+texture = ExtResource("3_0kbwr")
+
+[node name="3-CloudCover2" type="Sprite2D" parent="Background"]
+position = Vector2(-49, 211)
+scale = Vector2(2.28376, 2.10934)
+texture = ExtResource("3_0kbwr")
+
+[node name="3-CloudCover5" type="Sprite2D" parent="Background"]
+position = Vector2(475, 125)
+scale = Vector2(2.28376, 2.10934)
+texture = ExtResource("3_0kbwr")
+
+[node name="3-CloudCover6" type="Sprite2D" parent="Background"]
+position = Vector2(1138, 112)
+scale = Vector2(2.28376, 2.10934)
+texture = ExtResource("3_0kbwr")
+
+[node name="3-CloudCover7" type="Sprite2D" parent="Background"]
+position = Vector2(954, 301)
+scale = Vector2(2.28376, 2.10934)
+texture = ExtResource("3_0kbwr")
+
+[node name="3-CloudCover8" type="Sprite2D" parent="Background"]
+position = Vector2(538, 271)
+scale = Vector2(2.28376, 2.10934)
+texture = ExtResource("3_0kbwr")
+
+[node name="3-CloudCover9" type="Sprite2D" parent="Background"]
+position = Vector2(-37, 392)
+scale = Vector2(2.28376, 2.10934)
+texture = ExtResource("3_0kbwr")
+
+[node name="3-CloudCover3" type="Sprite2D" parent="Background"]
+position = Vector2(32, -18)
+scale = Vector2(1.41683, 1.17586)
+texture = ExtResource("3_0kbwr")
+
+[node name="3-CloudCover4" type="Sprite2D" parent="Background"]
+position = Vector2(778, -38)
+scale = Vector2(1.41683, 1.17586)
+texture = ExtResource("3_0kbwr")
+
+[node name="1-ForegroundScenery3" type="Sprite2D" parent="Background"]
+position = Vector2(924.5, 125)
+scale = Vector2(3.10938, 3.72837)
+texture = ExtResource("23_tk5ej")
+
+[node name="1-ForegroundScenery" type="Sprite2D" parent="Background"]
+position = Vector2(27.75, 124.75)
+scale = Vector2(3.10938, 3.72837)
+texture = ExtResource("23_tk5ej")
+
+[node name="1-ForegroundScenery2" type="Sprite2D" parent="Background"]
+position = Vector2(924.5, 125)
+scale = Vector2(3.10938, 3.72837)
+texture = ExtResource("23_tk5ej")
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ukpod")
 format = 2
@@ -986,7 +1056,7 @@ position = Vector2(871, 133)
 position = Vector2(527, 68)
 
 [node name="Sea_Void" parent="." instance=ExtResource("16_rdkl7")]
-position = Vector2(445, 527)
+position = Vector2(445, 509)
 
 [node name="DeathZone" type="Node2D" parent="."]
 
