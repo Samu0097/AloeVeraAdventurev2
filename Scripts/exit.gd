@@ -79,5 +79,4 @@ func _on_tutorial_dogg_exit_10():
 
 
 func _on_tutorial_dogg_credits_00():
-	print("gut")
 	audio_playerC.play()
