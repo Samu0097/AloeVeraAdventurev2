@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://tsw3ilff7h8o"]
 
-[ext_resource type="Script" path="res://Scene/intro.gd" id="1_u4hiw"]
-[ext_resource type="PackedScene" uid="uid://be410ygscs100" path="res://Scene/tutorial_dogg.tscn" id="2_b0p2k"]
+[ext_resource type="Script" path="res://Scripts/intro.gd" id="1_u4hiw"]
+[ext_resource type="PackedScene" uid="uid://danvhh2p4foyt" path="res://Scene/tutorial_dogg.tscn" id="2_b0p2k"]
 
 [node name="Intro" type="Node2D"]
 

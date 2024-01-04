@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dbp3jgwxeuk2w"]
 
-[ext_resource type="Script" path="res://Enemy.gd" id="1_fx05m"]
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_fx05m"]
 [ext_resource type="Texture2D" uid="uid://bcf32krkko4l" path="res://Assets/Assets/Bat/bat_wingsDown.png" id="2_1s83y"]
 [ext_resource type="Texture2D" uid="uid://cu8e04p2ac2xg" path="res://Assets/Assets/Bat/bat_wingsUp.png" id="3_73sqt"]
 

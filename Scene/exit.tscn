@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cvrqrxe2vwcs1"]
 
-[ext_resource type="Script" path="res://Scene/menu.gd" id="1_ailnr"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_ailnr"]
 
 [node name="Exit" type="Node2D"]
 

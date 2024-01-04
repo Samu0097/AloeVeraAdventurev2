@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://btob38i8tc80b"]
 
-[ext_resource type="Script" path="res://lifeGem.gd" id="1_0qugo"]
+[ext_resource type="Script" path="res://Scripts/lifeGem.gd" id="1_0qugo"]
 [ext_resource type="Texture2D" uid="uid://d3bhbojsv4vi7" path="res://Assets/Assets/Crystal/01.png" id="2_45i8c"]
 [ext_resource type="Texture2D" uid="uid://ctrt8rc2vi2i" path="res://Assets/Assets/Crystal/02.png" id="3_cu2ec"]
 [ext_resource type="Texture2D" uid="uid://b74vojehssp37" path="res://Assets/Assets/Crystal/03.png" id="4_iieg1"]

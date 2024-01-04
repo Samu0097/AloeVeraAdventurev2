@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://djrd26ymv67k5"]
 
-[ext_resource type="Script" path="res://Scene/Run.gd" id="1_2xfyn"]
+[ext_resource type="Script" path="res://Scripts/Run.gd" id="1_2xfyn"]
 [ext_resource type="Texture2D" uid="uid://oac531t2j3af" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Bubbling_Oil_frames (16 x 32).png" id="1_o5l2v"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="2_6ascl"]
 [ext_resource type="PackedScene" uid="uid://dkl8cpei68bs1" path="res://Scene/moreEnemy.tscn" id="4_l8yfn"]

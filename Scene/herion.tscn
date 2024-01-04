@@ -1,19 +1,19 @@
 [gd_scene load_steps=22 format=3 uid="uid://1xppm1i3p24g"]
 
-[ext_resource type="Script" path="res://Scene/herion.gd" id="1_3qdk8"]
+[ext_resource type="Script" path="res://Scripts/herion.gd" id="1_3qdk8"]
 [ext_resource type="Texture2D" uid="uid://7g7537ojuufk" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Terrain (16 x 16).png" id="1_jk8ig"]
 [ext_resource type="Texture2D" uid="uid://bewql0qbavjnb" path="res://Assets/Assets/Background/Additional Sky.png" id="1_pb8fe"]
 [ext_resource type="Texture2D" uid="uid://b2ugrala6rpch" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="2_d17go"]
 [ext_resource type="Texture2D" uid="uid://ctlsxjyxt2s6u" path="res://Assets/Assets/sheet.png" id="3_s2qqt"]
 [ext_resource type="Texture2D" uid="uid://chrk765lgsvum" path="res://Assets/Seasonal Tilesets/5 - Misc. universal tiles/Lava_frames (16 x 32).png" id="4_7jbhj"]
 [ext_resource type="PackedScene" uid="uid://cccaokb7wklss" path="res://Scene/player.tscn" id="4_hyxod"]
-[ext_resource type="Script" path="res://Scene/SagonPortal.gd" id="8_a8ilk"]
+[ext_resource type="Script" path="res://Scripts/SagonPortal.gd" id="8_a8ilk"]
 [ext_resource type="Texture2D" uid="uid://dmwj8wts5bmrc" path="res://Assets/Portals/pink/0.png" id="9_0713f"]
 [ext_resource type="Texture2D" uid="uid://c78bk34o70lvb" path="res://Assets/Portals/pink/1.png" id="10_o2iqs"]
 [ext_resource type="Texture2D" uid="uid://b0ffa8ijw42n1" path="res://Assets/Portals/pink/2.png" id="11_vsllc"]
 [ext_resource type="Texture2D" uid="uid://7vqwcoa0hnam" path="res://Assets/Portals/pink/3.png" id="12_tplux"]
-[ext_resource type="Script" path="res://Scene/FakePortal.gd" id="13_28cmo"]
-[ext_resource type="PackedScene" path="res://Scene/sea_void.tscn" id="14_xx4bq"]
+[ext_resource type="Script" path="res://Scripts/FakePortal.gd" id="13_28cmo"]
+[ext_resource type="PackedScene" uid="uid://bxsitsedy0wi3" path="res://Scene/sea_void.tscn" id="14_xx4bq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05vpj"]
 texture = ExtResource("1_jk8ig")

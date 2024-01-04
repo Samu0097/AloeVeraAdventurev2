@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cq7h3nh8oy2ic"]
 
-[ext_resource type="Script" path="res://Checkpoint.gd" id="1_47ps4"]
+[ext_resource type="Script" path="res://Scripts/Checkpoint.gd" id="1_47ps4"]
 [ext_resource type="Texture2D" uid="uid://n24a0mgkja78" path="res://Assets/Flag/0.png" id="2_ioya5"]
 [ext_resource type="Texture2D" uid="uid://dceayynmubgct" path="res://Assets/Flag/1.png" id="3_t8ej0"]
 

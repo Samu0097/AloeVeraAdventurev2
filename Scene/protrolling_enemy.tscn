@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddjq2qpjmg7o1"]
 
-[ext_resource type="Script" path="res://PatrollingEnemy.gd" id="1_fdk0g"]
+[ext_resource type="Script" path="res://Scripts/PatrollingEnemy.gd" id="1_fdk0g"]
 [ext_resource type="Texture2D" uid="uid://dp505l8ekxbut" path="res://Assets/AloeChar/terminator-dead/idle/0.png" id="2_lorkd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q462m"]
