@@ -46,6 +46,13 @@ action_mode = 0
 text = "New Game"
 icon_alignment = 1
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 176.0
+text = "Made by: Linda Samu Mia Pascal
+Niklas"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 zoom = Vector2(3.375, 3.375)

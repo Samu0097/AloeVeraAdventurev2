@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8ns7ntqjc2yg"]
+[gd_scene load_steps=8 format=3 uid="uid://bgsii6kq4frdj"]
 
 [ext_resource type="Script" path="res://randolf.gd" id="1_6pajt"]
 [ext_resource type="Texture2D" uid="uid://g5cgalr3ql1q" path="res://Assets/Player/sprite_29.png" id="2_bamgy"]

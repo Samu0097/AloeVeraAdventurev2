@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cccaokb7wklss"]
+[gd_scene load_steps=16 format=3 uid="uid://cccaokb7wklss"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_uxijk"]
 [ext_resource type="Texture2D" uid="uid://dcmuqaltgglrw" path="res://Assets/AloeChar/normal/jump/2.png" id="2_52yuq"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://dgu2j6gt44hw0" path="res://Assets/AloeChar/normal/walk/2.png" id="11_l6xew"]
 [ext_resource type="Texture2D" uid="uid://c027sseiua267" path="res://Assets/Assets/Coins/01.png" id="12_jwtwj"]
 [ext_resource type="Texture2D" uid="uid://cahu52awaiusn" path="res://Assets/Assets/heart pixel art/heart pixel art 16x16.png" id="13_njsyn"]
-[ext_resource type="AudioStream" uid="uid://b2f45iqiknglw" path="res://audio/walkingsound.mp3" id="14_ggd7w"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_22831"]
 radius = 5.0
@@ -128,10 +127,5 @@ texture = ExtResource("13_njsyn")
 [node name="JumpTimer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
-
-[node name="walking" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("14_ggd7w")
-volume_db = 0.44
-autoplay = true
 
 [connection signal="timeout" from="JumpTimer" to="." method="_on_jump_timer_timeout"]

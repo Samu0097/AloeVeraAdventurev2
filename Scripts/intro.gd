@@ -2,7 +2,9 @@ extends Control
 
 var elapsed_time = 0
 @onready var audio_player = $introAudio
+@onready var audio_player2 = $introAudio2
 var play_sound = true
+var intro_audio2 = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.exitCount = 0
@@ -10,9 +12,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	elapsed_time += delta
-	if elapsed_time >=1.2 and play_sound == true:
+	if elapsed_time >=1.2 and play_sound == true and intro_audio2 == false:
 		audio_player.play()
 		play_sound = false
+		
+	elif intro_audio2==true and play_sound==true:
+		print("gut")
+		audio_player.stop()
+		audio_player2.play()
+		play_sound = false
+		intro_audio2 ==false
 
 
 func _on_new_game_pressed():
@@ -35,3 +44,8 @@ func _on_credits_pressed():
 
 func _on_intro_audio_finished():
 	play_sound = false
+
+
+func _on_tutorial_dogg_intro_audio_2():
+	play_sound = true
+	intro_audio2 = true
