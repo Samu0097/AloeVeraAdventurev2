@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://de5cunaic7w2c"]
+[gd_scene load_steps=35 format=3 uid="uid://de5cunaic7w2c"]
 
 [ext_resource type="Texture2D" uid="uid://cnee2aeec6la0" path="res://Assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_om7qi"]
 [ext_resource type="Script" path="res://Scripts/orion.gd" id="1_tcq53"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://cq7h3nh8oy2ic" path="res://Scene/checkpoint.tscn" id="19_fuxvq"]
 [ext_resource type="Texture2D" uid="uid://cu0pwi6l5c88d" path="res://Assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="23_tk5ej"]
 [ext_resource type="PackedScene" uid="uid://b1evdviu023od" path="res://Scene/trader.tscn" id="24_28s0n"]
+[ext_resource type="PackedScene" uid="uid://lyacnc1sycxt" path="res://Scene/schild.tscn" id="25_lkex0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0huiv"]
 texture = ExtResource("1_om7qi")
@@ -1183,6 +1184,25 @@ scale = Vector2(2, 2)
 
 [node name="Trader" parent="." instance=ExtResource("24_28s0n")]
 position = Vector2(346, 69)
+
+[node name="Schild" parent="." instance=ExtResource("25_lkex0")]
+position = Vector2(472, -10)
+
+[node name="Test" type="Label" parent="Schild"]
+visible = false
+offset_left = -45.0
+offset_top = -37.0
+offset_right = -5.0
+offset_bottom = -14.0
+text = "test"
+
+[node name="Child" type="Label" parent="Schild"]
+visible = false
+offset_left = -15.0
+offset_top = -57.0
+offset_right = 25.0
+offset_bottom = -34.0
+text = "Child"
 
 [connection signal="body_entered" from="HerionPortal" to="HerionPortal" method="_on_body_entered"]
 [connection signal="body_entered" from="FakePortale/FakePortal" to="FakePortale/FakePortal" method="_on_body_entered"]
