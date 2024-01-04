@@ -17,8 +17,8 @@ func _on_new_game_pressed():
 
 func _on_exit_pressed():
 	get_tree().change_scene_to_file("res://Scene/exit.tscn")
-	Global.exitCount = Global.exitCount + 1
-	print(Global.exitCount)
+	
+	print("EC Intro: ",Global.exitCount)
 	if Global.exitCount == 10:
 		get_tree().quit()
 

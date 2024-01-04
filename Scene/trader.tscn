@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://b1evdviu023od"]
+
+[ext_resource type="Script" path="res://Trader.gd" id="1_j0g5w"]
+[ext_resource type="Texture2D" uid="uid://c027sseiua267" path="res://Assets/Assets/Coins/01.png" id="2_n0kk1"]
+[ext_resource type="Texture2D" uid="uid://cahu52awaiusn" path="res://Assets/Assets/heart pixel art/heart pixel art 16x16.png" id="3_667ft"]
+[ext_resource type="Texture2D" uid="uid://cd0ody4eqfylh" path="res://Assets/Assets/Player/01-Idle/Idle 01.png" id="4_xjxki"]
+[ext_resource type="Texture2D" uid="uid://deohvydbhlges" path="res://Assets/Assets/Player/01-Idle/Idle 02.png" id="5_jko05"]
+[ext_resource type="Texture2D" uid="uid://w6j485bke8va" path="res://Assets/Assets/Player/01-Idle/Idle 03.png" id="6_edvxs"]
+[ext_resource type="Texture2D" uid="uid://cjojeeoqkdx62" path="res://Assets/Assets/Player/01-Idle/Idle 04.png" id="7_f6pan"]
+[ext_resource type="Texture2D" uid="uid://dmuvmh34m11xw" path="res://Assets/Assets/Player/01-Idle/Idle 05.png" id="8_qggvv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7a1h"]
+radius = 19.9999
+height = 125.892
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rcj3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xjxki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jko05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_edvxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f6pan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qggvv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Trader" type="Area2D"]
+script = ExtResource("1_j0g5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.31323e-10, -9)
+rotation = -1.56726
+shape = SubResource("CapsuleShape2D_v7a1h")
+
+[node name="Trade" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, -11)
+scale = Vector2(0.5, 0.5)
+
+[node name="Trade" type="Label" parent="Trade"]
+offset_left = -8.0
+offset_top = -34.0
+offset_right = 32.0
+offset_bottom = -11.0
+text = "-->"
+
+[node name="coin" type="Node2D" parent="Trade"]
+position = Vector2(4, -2)
+
+[node name="Coin2" type="Sprite2D" parent="Trade/coin"]
+position = Vector2(-25, -20)
+scale = Vector2(1.45565, 1.40388)
+texture = ExtResource("2_n0kk1")
+
+[node name="Coin" type="Label" parent="Trade/coin"]
+offset_left = -52.0
+offset_top = -32.0
+offset_right = -12.0
+offset_bottom = -9.0
+text = "10"
+
+[node name="life" type="Node2D" parent="Trade"]
+position = Vector2(-4, -2)
+
+[node name="Life" type="Label" parent="Trade/life"]
+offset_left = 17.0
+offset_top = -33.0
+offset_right = 57.0
+offset_bottom = -10.0
+text = "1"
+
+[node name="Life2" type="Sprite2D" parent="Trade/life"]
+position = Vector2(35, -20)
+texture = ExtResource("3_667ft")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4rcj3")
+autoplay = "default"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

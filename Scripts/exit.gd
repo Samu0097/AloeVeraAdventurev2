@@ -2,7 +2,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	Global.exitCount = Global.exitCount + 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,8 +17,6 @@ func _on_new_game_pressed():
 
 func _on_exit_pressed():
 	get_tree().change_scene_to_file("res://Scene/exit.tscn")
-	Global.exitCount = Global.exitCount + 1
-	print(Global.exitCount)
 	if Global.exitCount == 10:
 		get_tree().quit()
 

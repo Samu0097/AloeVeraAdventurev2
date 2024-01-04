@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dcaxkcpwqpkyd"]
 
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_e20da"]
+[ext_resource type="Script" path="res://Scripts/exit.gd" id="1_e20da"]
 
 [node name="Credits" type="Node2D"]
 

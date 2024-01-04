@@ -1,5 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://cq37m60h21qk8"]
 
+[ext_resource type="Texture2D" uid="uid://bht0a0t254o3o" path="res://Assets/Background/P_Background.png" id="1_b3qsk"]
 [ext_resource type="Script" path="res://Scripts/RunPortal.gd" id="1_jyk84"]
 [ext_resource type="Texture2D" uid="uid://cp4df650i4106" path="res://Assets/Portals/purple/0.png" id="2_pcitq"]
 [ext_resource type="Texture2D" uid="uid://dqtl140j52pgw" path="res://Assets/Portals/purple/1.png" id="3_bkt8o"]
@@ -120,6 +121,11 @@ radius = 5.0
 height = 18.0
 
 [node name="Sagon" type="Node2D"]
+
+[node name="PBackground" type="Sprite2D" parent="."]
+position = Vector2(2086, 2649)
+scale = Vector2(19.1484, 18.6437)
+texture = ExtResource("1_b3qsk")
 
 [node name="RunPortal" type="Area2D" parent="."]
 position = Vector2(18, 3680)
