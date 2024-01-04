@@ -11,6 +11,8 @@ extends Control
 @onready var audio_player10 = $a10
 @onready var audio_playerC = $aC
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.exitCount = Global.exitCount + 1
@@ -29,9 +31,9 @@ func _on_new_game_pressed():
 func _on_exit_pressed():
 	get_tree().change_scene_to_file("res://Scene/exit.tscn")
 	if Global.exitCount == 10:
-		get_tree().quit()
-
-
+		Global.close_game()
+	
+	
 func _on_credits_pressed():
 	
 	get_tree().change_scene_to_file("res://Scene/credits.tscn")
