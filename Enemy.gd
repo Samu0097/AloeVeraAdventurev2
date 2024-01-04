@@ -15,12 +15,8 @@ func _on_detection_area_body_entered(body):
 		if body is Player:
 			player = body
 			player_chase = true
+			get_node("detectionArea").hide()
 
-
-func _on_detection_area_body_exited(body):
-	if body is Player:
-		player = null
-		player_chase = false
 
 
 func _on_area_2d_body_entered(body):

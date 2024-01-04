@@ -57,46 +57,141 @@ layer_0/tile_data = PackedInt32Array(-4, 0, 0, 65532, 0, 1, -3, 65536, 0, 65533,
 position = Vector2(23, -42)
 
 [node name="moreEnemy" type="Node2D" parent="."]
-visible = false
 
 [node name="MoreEnemy2" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-709, -4151)
+position = Vector2(-673, -900)
 
 [node name="MoreEnemy" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-3395, -3940)
+position = Vector2(-450, -1282)
 
 [node name="MoreEnemy3" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-7497, -2930)
+position = Vector2(-116, -1565)
 
 [node name="MoreEnemy4" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(2052, -3065)
+position = Vector2(94, -1808)
 
 [node name="MoreEnemy5" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-4872, -2523)
+position = Vector2(372, -1984)
 
 [node name="MoreEnemy7" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-15675, -2016)
+position = Vector2(824, -2315)
 
 [node name="MoreEnemy8" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-16512, -1857)
+position = Vector2(1751, -1795)
 
 [node name="MoreEnemy9" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-18028, -1586)
+position = Vector2(-550, -518)
 
 [node name="MoreEnemy10" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-7099, -3464)
+position = Vector2(2113, -1890)
 
 [node name="MoreEnemy11" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-15199, -1970)
+position = Vector2(2540, -1868)
 
 [node name="MoreEnemy12" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-11194, -862)
+position = Vector2(2876, -1889)
 
 [node name="MoreEnemy13" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-13027, -907)
+position = Vector2(3321, -1934)
 
 [node name="MoreEnemy14" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-9973, -2129)
+position = Vector2(3797, -1896)
 
 [node name="MoreEnemy6" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
-position = Vector2(-3334, -2930)
+position = Vector2(4310, -1909)
+
+[node name="MoreEnemy15" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(4638, -1880)
+
+[node name="MoreEnemy16" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(4838, -1937)
+
+[node name="MoreEnemy17" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(-279, -697)
+
+[node name="MoreEnemy18" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(-122, -911)
+
+[node name="MoreEnemy19" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(92, -1111)
+
+[node name="MoreEnemy20" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(292, -1396)
+
+[node name="MoreEnemy21" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(663, -1539)
+
+[node name="MoreEnemy22" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(934, -1710)
+
+[node name="MoreEnemy23" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(1760, -1197)
+
+[node name="MoreEnemy24" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(848, -1867)
+
+[node name="MoreEnemy25" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(1959, -1354)
+
+[node name="MoreEnemy26" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(2244, -1440)
+
+[node name="MoreEnemy27" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(2572, -1469)
+
+[node name="MoreEnemy28" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(3000, -1469)
+
+[node name="MoreEnemy29" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(3285, -1483)
+
+[node name="MoreEnemy30" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(3656, -1526)
+
+[node name="MoreEnemy31" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(4055, -1483)
+
+[node name="MoreEnemy32" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(4483, -1483)
+
+[node name="MoreEnemy33" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(4811, -1526)
+
+[node name="MoreEnemy34" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(5167, -1540)
+
+[node name="MoreEnemy35" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(5523, -1526)
+
+[node name="MoreEnemy36" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(5865, -1555)
+
+[node name="MoreEnemy37" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(5865, -1555)
+
+[node name="MoreEnemy38" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(2273, -942)
+
+[node name="MoreEnemy39" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(2829, -985)
+
+[node name="MoreEnemy40" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(3641, -999)
+
+[node name="MoreEnemy41" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(4411, -1028)
+
+[node name="MoreEnemy42" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(5266, -1014)
+
+[node name="MoreEnemy43" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(6036, -1071)
+
+[node name="MoreEnemy44" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(392, -572)
+
+[node name="MoreEnemy45" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(891, -914)
+
+[node name="MoreEnemy46" parent="moreEnemy" instance=ExtResource("4_l8yfn")]
+position = Vector2(1376, -1299)

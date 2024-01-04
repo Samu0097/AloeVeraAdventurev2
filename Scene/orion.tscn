@@ -768,7 +768,7 @@ position = Vector2(648, -63)
 [node name="Clouds" type="Node2D" parent="."]
 
 [node name="moving_plattform" parent="Clouds" instance=ExtResource("18_nflaq")]
-position = Vector2(59, -273)
+position = Vector2(-6, -277)
 
 [node name="moving_plattform2" parent="Clouds" instance=ExtResource("18_nflaq")]
 position = Vector2(297, -269)

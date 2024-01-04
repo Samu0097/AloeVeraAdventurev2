@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://be410ygscs100"]
+[gd_scene load_steps=11 format=3 uid="uid://danvhh2p4foyt"]
 
 [ext_resource type="Texture2D" uid="uid://daqg0v7r6enxb" path="res://Assets/Tutorial Dogg/Tutorial-Dogg 2.png" id="1_n5ucc"]
 
@@ -70,4 +70,4 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_oq7lh")
-frame_progress = 0.2548
+frame_progress = 0.5964

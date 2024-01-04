@@ -26,15 +26,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kuob0"]
 radius = 5.09902
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6frbh"]
-size = Vector2(8610.55, 65022.7)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wa1jb"]
+radius = 1055.87
+height = 5458.23
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xgieb"]
 radius = 6.0
 
 [node name="MoreEnemy" type="CharacterBody2D"]
-position = Vector2(-15122, 359)
 script = ExtResource("1_lcyc1")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.499999, 0)
@@ -48,8 +49,10 @@ shape = SubResource("CircleShape2D_kuob0")
 [node name="detectionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detectionArea"]
-rotation = -1.57058
-shape = SubResource("RectangleShape2D_6frbh")
+position = Vector2(34, 1244)
+rotation = -3.14621
+shape = SubResource("CapsuleShape2D_wa1jb")
+metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -57,5 +60,4 @@ shape = SubResource("RectangleShape2D_6frbh")
 shape = SubResource("CircleShape2D_xgieb")
 
 [connection signal="body_entered" from="detectionArea" to="." method="_on_detection_area_body_entered"]
-[connection signal="body_exited" from="detectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
