@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://tsw3ilff7h8o"]
+[gd_scene load_steps=5 format=3 uid="uid://tsw3ilff7h8o"]
 
 [ext_resource type="Script" path="res://Scripts/intro.gd" id="1_u4hiw"]
 [ext_resource type="PackedScene" uid="uid://be410ygscs100" path="res://Scene/tutorial_dogg.tscn" id="2_b0p2k"]
 [ext_resource type="AudioStream" uid="uid://d4i3g4fe353rm" path="res://Assets/Tutorial Dogg/Sound/00_intro.mp3" id="2_gd6rk"]
+[ext_resource type="AudioStream" uid="uid://bhj6t4go3u4wa" path="res://Assets/Tutorial Dogg/Sound/01_ayy.mp3" id="3_mgdkq"]
 
 [node name="Intro" type="Node2D"]
 
@@ -48,6 +49,7 @@ text = "Credits"
 stream = ExtResource("2_gd6rk")
 
 [node name="introAudio2" type="AudioStreamPlayer" parent="Intro"]
+stream = ExtResource("3_mgdkq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0

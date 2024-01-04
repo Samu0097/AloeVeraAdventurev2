@@ -12,12 +12,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	elapsed_time += delta
-	if elapsed_time >=1.2 and play_sound == true:
+	if elapsed_time >=1.2 and play_sound == true and intro_audio2 == false:
 		audio_player.play()
 		play_sound = false
 		
-	if intro_audio2==true:
+	elif intro_audio2==true and play_sound==true:
+		print("gut")
+		audio_player.stop()
 		audio_player2.play()
+		play_sound = false
+		intro_audio2 ==false
 
 
 func _on_new_game_pressed():
