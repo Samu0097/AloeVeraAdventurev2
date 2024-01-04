@@ -31,6 +31,6 @@ shape = SubResource("CapsuleShape2D_gv3p5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qucyp")
 autoplay = "default"
-frame_progress = 0.456067
+frame_progress = 0.84369
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
